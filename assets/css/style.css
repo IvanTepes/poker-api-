@@ -1,0 +1,42 @@
+/* .game-container {
+    height: 100vh;
+    background: green;
+    
+} */
+
+.game-container {
+  background: green no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+}
+
+.game-title {
+    height: 60px;
+    position: absolute;
+    left: 45%;
+    font-size: 50px;
+}
+
+.combinations {
+    height: 50px;
+    width: 300px;
+    background-color: red;
+    top: 50px;
+    
+}
+
+.cards-container {
+    height: 500px;
+    width: 300px;
+    display: flex;
+    background-color: red;
+    
+}
+
+.card {
+    background-color: blue;
+    margin: 20px;
+}
