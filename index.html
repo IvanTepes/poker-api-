@@ -21,18 +21,23 @@
 
 <body>
 	<div class="game-container">
-		<div class="game-title">POKER SLOTS</div>
+		<div class="game-title"></div>
 		<div class="combinations">combinations</div>
 		<div class="wins">Wins</div>
 		<div class="container-fluid cards-container">
-			<img class="card" id="card1" src=" "></img>
-			<img class="card" id="card2" src=" "></img>
-			<img class="card" id="card3" src=" "></img>
-			<img class="card" id="card4" src=" "></img>
-			<img class="card" id="card5" src=" "></img>
+			<img class="cards" id="card1" src=" "></img>
+			<img class="cards" id="card2" src=" "></img>
+			<img class="cards" id="card3" src=" "></img>
+			<img class="cards" id="card4" src=" "></img>
+			<img class="cards" id="card5" src=" "></img>
 		</div>
-		<button type="button" onclick="getData(drawCards)">Deal</button>
+        <div class="button-container">
+            <button id="deal" class="deal" type="button" onclick="drawImg()">Deal</button>
+        </div>
+        
 	</div>
+    
+    
 
 
 
