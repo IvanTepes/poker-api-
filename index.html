@@ -20,7 +20,7 @@
 </head>
 
 <body>
-	<div class="game-container">
+<!-- 	<div class="game-container">
 		<div class="game-title"></div>
 		<div class="combinations">combinations</div>
 		<div class="wins">Wins</div>
@@ -32,21 +32,44 @@
 			<img class="cards" id="card5" src=" "></img>
 		</div>
         <div class="button-container">
-            <button id="deal" class="deal" type="button" onclick="drawImg()">Deal</button>
+            <button id="deal" class="deal" type="button" onclick="drawCards()">Deal</button>
         </div>
         
 	</div>
+ -->
+<div class="container-fluid game-screen">
+            <!-- <div class="loading"></div> -->
+            <div class="container-fluid info">
+                <div class="row">
+                    <div class="col">
+                        <div class="credit">Credit</div>
+                        <div class="wins">Wins</div>
+                    </div>
+                    <div class="col">
+                        <div class="logo">Logo</div>
+                    </div>
+                    <div class="col">
+                        <div class="combinations">Combinations</div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid cards-container ">
+                        <img class="cards" id="card1" src=" "></img>
+                        <img class="cards" id="card2" src=" "></img>
+                        <img class="cards" id="card3" src=" "></img>
+                        <img class="cards" id="card4" src=" "></img>
+                        <img class="cards" id="card5" src=" "></img>
+            </div>
+            <div class="container-fluid play">
+                <div class="container" id="play-container">
+                        <button class="play-buttons">Bet</button>
+                        <button class="play-buttons">Double</button>
+                        <button id="deal" class="deal play-buttons" type="button" onclick="drawCards()">Deal</button>
+                </div>
+            </div>
+</div>
     
     
-
-
-
-
-
-
-
-
-
 
 
 	<!-- Optional JavaScript -->

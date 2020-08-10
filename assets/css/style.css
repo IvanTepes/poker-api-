@@ -3,7 +3,7 @@
     background: green;
     
 } */
-
+/* 
 .game-container {
   background: url(/assets/images/bg.png) no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -73,4 +73,92 @@
     height: 50px;
     width: 100px;
     margin-top: 30px;
+}
+ */
+
+ .game-screen {
+     height: 100vh;
+     background: url(/assets/images/bg.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; 
+
+ }
+
+ .info {
+     height: 30vh;
+     background-color: red;
+     margin-bottom: 2vh;
+     padding-top: 2vh;
+ }
+
+ .cards-container {
+    height: 50vh;
+    background-color: blue;
+    margin-bottom: 2vh;
+    text-align: center;
+ }
+
+ .play {
+     height:15vh;
+     background-color: green;
+ }
+
+ .credit {
+     height: 11vh;
+     background-color: black;
+     width: 100%;
+ }
+
+ .wins {
+     width: 100%;
+     height: 12vh;
+     margin-top: 2vh;
+     background-color: black;
+ }
+
+.logo {
+    width: 100%;
+    height: 25vh;
+    background-color: black;
+}
+
+.combinations {
+    height: 25vh;
+    width: 100%;
+    background-color: black;
+}
+
+/* .cards {
+    height: 46vh;
+    background-color: black;
+    width: 30vh;
+    margin-top: 2vh;
+    margin-left: 2vh;
+} */
+
+#card1,
+#card2,
+#card3,
+#card4,
+#card5  {
+    height: 46vh;
+    width: 30vh;
+    margin-top: 2vh;
+    display: inline-block;
+    padding: 2vh;
+}
+
+#play-container {
+    position: relative;
+    display: inherit;
+    text-align: end;
+    margin-right: 15vh;
+    padding-top: 3vh;
+}
+
+.play-buttons {
+    height: 5vh;
+    width: 10vh;
 }
