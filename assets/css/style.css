@@ -106,28 +106,102 @@
  }
 
  .credit {
-     height: 11vh;
-     background-color: black;
-     width: 100%;
+    height: 11vh;
+    background-color: black;
+    width: 100%;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 600;
+    display: flex;
+    padding: 1.5vh;
+    overflow: auto;
+    font-size: 2.5vw;
+    justify-content: center;
+ }
+ 
+ .credit-remaining {
+     color: yellow;
  }
 
- .wins {
-     width: 100%;
-     height: 12vh;
-     margin-top: 2vh;
-     background-color: black;
+ .wins-container {
+    height: 12vh;
+    background-color: black;
+    width: 100%;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 600;
+    display: flex;
+    padding: 1.5vh;
+    overflow: auto;
+    font-size: 2.5vw;
+    justify-content: center;
+
  }
+
 
 .logo {
-    width: 100%;
+    
     height: 25vh;
-    background-color: black;
+    background: url(/assets/images/logo.png) no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: contain; 
 }
 
 .combinations {
     height: 25vh;
     width: 100%;
     background-color: black;
+}
+
+.hand {
+    color: red;
+    height: 2.2vw;
+    text-align: center;
+}
+
+.royal-flush {
+     background: url(/assets/images/hands/royal-flush.png) no-repeat center center;
+     background-size: contain;
+}
+
+.straight-flush {
+     background: url(/assets/images/hands/straight-flush.png) no-repeat center center;
+     background-size: contain;
+}
+
+.four-of-kind {
+     background: url(/assets/images/hands/four-of-kind.png) no-repeat center center;
+     background-size: contain;
+}
+
+.full-house {
+     background: url(/assets/images/hands/full-house.png) no-repeat center center;
+     background-size: contain;
+}
+
+.flush {
+     background: url(/assets/images/hands/flush.png) no-repeat center center;
+     background-size: contain;
+}
+
+.straight {
+     background: url(/assets/images/hands/straight.png) no-repeat center center;
+     background-size: contain;
+}
+
+.three-of-kind {
+     background: url(/assets/images/hands/three-of-kind.png) no-repeat center center;
+     background-size: contain;
+}
+
+.two-pair {
+     background: url(/assets/images/hands/two-pair.png) no-repeat center center;
+     background-size: contain;
+}
+
+.one-pair {
+     background: url(/assets/images/hands/one-pair.png) no-repeat center center;
+     background-size: contain;
 }
 
 /* .cards {
