@@ -3,54 +3,39 @@
 
 <head>
 	<!-- Required meta tags -->
+    
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!-- Css style -->
+
 	<link rel="stylesheet" href="/assets/css/style.css">
 	<!-- Poker Javascript-->
+
 	<!-- <script type="text/javascript" src="testing.js"></script> -->
 	<script type="text/javascript" src="assets/js/main.js"></script>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:wght@500&display=swap" rel="stylesheet">
 
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
 		integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
-
-
-	<title>Poker slot!</title>
+	<title>Royal Flush Video Poker</title>
 </head>
 
 <body>
-<!-- 	<div class="game-container">
-		<div class="game-title"></div>
-		<div class="combinations">combinations</div>
-		<div class="wins">Wins</div>
-		<div class="container-fluid cards-container">
-			<img class="cards" id="card1" src=" "></img>
-			<img class="cards" id="card2" src=" "></img>
-			<img class="cards" id="card3" src=" "></img>
-			<img class="cards" id="card4" src=" "></img>
-			<img class="cards" id="card5" src=" "></img>
-		</div>
-        <div class="button-container">
-            <button id="deal" class="deal" type="button" onclick="drawCards()">Deal</button>
-        </div>
-        
-	</div>
- -->
+
 <div class="container-fluid game-screen">
             <!-- <div class="loading"></div> -->
             <div class="container-fluid info">
                 <div class="row">
                     <div class="col">
-                        <div class="credit">Credit   
-                            <div class="credit-remaining"> : 10000000</div>
+                        <div class="credit">CREDIT:&nbsp  
+                            <div class="credit-remaining">10000000</div>
                         </div>
-                        <div class="wins-container">Wins
-                            <div class="wins">: 3458909</div>
+                        <div class="wins-container">WINS:&nbsp
+                            <div class="wins"> 3458909</div>
                         </div>
                     </div>
                     <div class="col">
@@ -58,45 +43,66 @@
                     </div>
                     <div class="col">
                         <div class="combinations">
-                                <div class="row">
-                                    <div id="royal-flush" class="col hand royal-flush"></div>
+                            <div class="container">
+                                <div class="row mt-1 m-0 hand-holder">
+                                    <div id="royal-flush" class="col hand royal-flush">ROYAL FLUSH : 250 x Bet</div>
                                 </div>
-                                <div class="row">
-                                    <div class="col hand straight-flush"></div>
-                                    <div class="col hand straight"></div>
+                                <div class="row m-0 hand-holder">
+                                    <div id="straight-flush" class="col hand straight-flush">STRAIGHT FLUSH : 50 x Bet</div>
+                                    <div id="straight" class="col hand straight">STRAIGHT : 4 x Bet</div>
                                 </div>
-                                <div class="row">
-                                    <div class="col hand four-of-kind"></div>
-                                    <div class="col hand three-of-kind"></div>
+                                <div class="row m-0 hand-holder">
+                                    <div id="four-of-kind" class="col hand four-of-kind">FOUR OF KIND : 25 x Bet</div>
+                                    <div id="three-of-kind" class="col hand three-of-kind">THREE OF KIND : 3 x Bet</div>
                                 </div>
-                                <div class="row">
-                                    <div class="col hand full-house"></div>
-                                    <div class="col hand two-pair"></div>
+                                <div class="row m-0 hand-holder">
+                                    <div id="full-house" class="col hand full-house">FULL HOUSE : 9 x Bet</div>
+                                    <div id="two-pair" class="col hand two-pair">TWO PAIR : 2 x Bet</div>
                                 </div>
-                                <div class="row">
-                                    <div class="col hand flush"></div>
-                                    <div class="col hand one-pair"></div>
+                                <div class="row m-0 hand-holder">
+                                    <div id="flush" class="col hand flush">FLUSH : 6 x Bet</div>
+                                    <div id="one-pair" class="col hand one-pair">ONE PAIR : 1 x Bet</div>
                                 </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- Cards 
+
+                Src is set up like this to remove border when src is empty
+                
+                 -->
             <div class="container-fluid cards-container ">
-                        <img class="cards" id="card1" src=" "></img>
-                        <img class="cards" id="card2" src=" "></img>
-                        <img class="cards" id="card3" src=" "></img>
-                        <img class="cards" id="card4" src=" "></img>
-                        <img class="cards" id="card5" src=" "></img>
+                        <img class="cards" id="card1" src=
+                        "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 ">
+                        </img>
+                        <img class="cards" id="card2" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></img>
+                        <img class="cards" id="card3" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></img>
+                        <img class="cards" id="card4" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></img>
+                        <img class="cards" id="card5" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></img>
+
+                        <!-- <div class="cards" id="card1" src=" "></div>
+                        <div class="cards" id="card2" src=" "></div>
+                        <div class="cards" id="card3" src=" "></div>
+                        <div class="cards" id="card4" src=" "></div>
+                        <div class="cards" id="card5" src=" "></div> -->
             </div>
-            <div class="container-fluid play">
-                <div class="container" id="play-container">
-                        <button class="play-buttons">Bet</button>
-                        <button class="play-buttons">Double</button>
-                        <button id="deal" class="deal play-buttons" type="button" onclick="drawCards()">Deal</button>
-                </div>
-            </div>
+			<div class="container-fluid play">
+				<div class="container" id="play-container">
+					<div class="row">
+                        <div role="button" class="col play-buttons menu">MENU</div>
+                        <div role="button" class="col play-buttons bet">BET</div>
+                        <div role="button" class="col play-buttons double">DOUBLE</div>
+					    <div role="button" id="deal" class="col play-buttons deal" type="button" onclick="drawCards()">
+							&nbspD&nbspE&nbspA&nbspL&nbsp</div>
+						
+						
+						
+					</div>
+				</div>
+			</div>
 </div>
-    
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
