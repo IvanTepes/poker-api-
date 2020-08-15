@@ -186,21 +186,22 @@
 /* Buttons */
 
 .play-buttons {
-    width: 10vh;
     margin: 1vw;
     font-family: Recursive;
     font-size: 1.7vw;
-}
-
-.deal {
     width: 10vw;
     border-radius: 10px;
     background-color: black;
     color: red;
+    background: linear-gradient(180deg, rgb(0 0 0) 0%, rgb(43 43 43) 50%, rgba(0,6,2,1) 100%);
+    border: 2px solid #bfbfbf;
+    box-shadow: inset 0px 0px 8px 0px #ffffff;
+    text-shadow: 0 0 14px #000000, 0px 0px 20px #000000;
 }
 
+
 .menu {
-    color: yellow;
+   color: yellow;
 }
 
 /* /buttons */
