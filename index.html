@@ -73,29 +73,57 @@
                 Src is set up like this to remove border when src is empty
                 
                  -->
-            <div class="container-fluid cards-container ">
-                        <img class="cards" id="card1" src=
-                        "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 ">
-                        </img>
-                        <img class="cards" id="card2" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></img>
-                        <img class="cards" id="card3" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></img>
-                        <img class="cards" id="card4" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></img>
-                        <img class="cards" id="card5" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></img>
-
-                        <!-- <div class="cards" id="card1" src=" "></div>
-                        <div class="cards" id="card2" src=" "></div>
-                        <div class="cards" id="card3" src=" "></div>
-                        <div class="cards" id="card4" src=" "></div>
-                        <div class="cards" id="card5" src=" "></div> -->
-            </div>
+			<div class="container-fluid cards-container ">
+			
+				<div class="scene">
+					<div class="card card-1" onclick="flip()">
+						<div class="front card__face card__face--front">front</div>
+						<div class="back card__face card__face--back"><img class="cards" id="card1" src=
+			                        "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 ">
+			                        </img></div>
+					</div>
+                    <div class="card card-2" onclick="flip()">
+						<div class="card__face card__face--front">front</div>
+						<div class="card__face card__face--back"><img class="cards" id="card2" src=
+			                        "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 ">
+			                        </img></div>
+					</div>
+                    <div class="card card-3" onclick="flip()">
+						<div class="card__face card__face--front">front</div>
+						<div class="card__face card__face--back"><img class="cards" id="card3" src=
+			                        "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 ">
+			                        </img></div>
+					</div>
+                    <div class="card card-4" onclick="flip()">
+						<div class="card__face card__face--front">front</div>
+						<div class="card__face card__face--back"><img class="cards" id="card4" src=
+			                        "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 ">
+			                        </img></div>
+					</div>
+                    <div class="card card-5" onclick="flip()">
+						<div class="card__face card__face--front">front</div>
+						<div class="card__face card__face--back"><img class="cards" id="card5" src=
+			                        "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 ">
+			                        </img></div>
+					</div>
+				</div>
+				<!-- <img class="cards" id="card1" src=
+			                        "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 ">
+			                        </img>
+			                        <img class="cards" id="card2" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></img>
+			                        <img class="cards" id="card3" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></img>
+			                        <img class="cards" id="card4" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></img>
+			                        <img class="cards" id="card5" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></img> -->
+			
+			</div>
 			<div class="container-fluid play">
 				<div class="container" id="play-container">
 					<div class="row">
                         <div role="button" class="col play-buttons menu">MENU</div>
                         <div role="button" class="col play-buttons bet">BET</div>
                         <div role="button" class="col play-buttons double">DOUBLE</div>
-					    <div role="button" id="deal" class="col play-buttons deal" type="button" onclick="drawCards()">
-							&nbspD&nbspE&nbspA&nbspL&nbsp</div>
+					    <div role="button" id="deal" class="col play-buttons deal" type="button" onclick="drawCards(), flip()">
+							&nbspD&nbspE&nbspA&nbspL&nbspF</div>
 						
 						
 						

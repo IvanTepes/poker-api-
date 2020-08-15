@@ -1,3 +1,19 @@
+/* window.onload = function () {
+    var card = document.querySelector('.card, .card');
+    card.addEventListener('click', function () {
+        card.classList.toggle('is-flipped');
+    });
+}
+ */
+/* window.onload = function () {
+$('.card').on('click', function() {
+    $(this).toggleClass('is-flipped');
+})
+} */
+
+function flip() {
+    $('.card').toggleClass('is-flipped');
+}
 
 // Draw cards images 
 function drawCards() {

@@ -212,3 +212,76 @@
 .menu {
     color: yellow;
 }
+
+
+/* Card flip test */
+
+.scene {
+  /* width: 200px;
+  height: 260px;
+  border: 1px solid #CCC;
+  margin: 40px 0;
+  perspective: 600px; */
+    width: 100%;
+    height: 24vw;
+    /* border: 1px solid #CCC; */
+    /* margin: 40px 0; */
+    perspective: 600px;
+    display: flex;
+}
+
+.card-1 {
+    margin-left: 0.3vw;
+}
+.card {
+ /*  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative; */
+
+  position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    text-align: justify;
+    margin-left: auto;
+    width: 17vw;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.card.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  line-height: 260px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.card__face--front {
+  background: red;
+}
+
+.card__face--back {
+  background: blue;
+  transform: rotateY(180deg);
+}
