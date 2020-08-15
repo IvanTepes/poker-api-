@@ -9,6 +9,8 @@
     background: linear-gradient(180deg, rgba(15,68,33,1) 0%, rgba(1,64,23,1) 50%, rgba(0,6,2,1) 100%);
  }
 
+/* Game Sections */
+
  .info {
      height: 30vh;
      margin-bottom: 2vh;
@@ -24,6 +26,18 @@
  .play {
      height:15vh;
  }
+
+ #play-container {
+    position: relative;
+    display: contents;
+    text-align: center;
+    margin-right: 6vw;
+    flex-flow: column;
+}
+
+ /* /Game Sections */
+
+/* Counters Containers */
 
  .credit {
     height: 6vw;
@@ -68,6 +82,8 @@
     color: yellow;
 }
 
+/* /Counters Containers */
+
 .logo {
     height: 25vh;
     background: url(/assets/images/logo.png) no-repeat center center; 
@@ -76,6 +92,8 @@
   -o-background-size: cover;
     background-size: contain; 
 }
+
+/* Wininng Combinations Display */
 
 .combinations {
     height: 23.5vh;
@@ -108,6 +126,9 @@
     margin-right: 0px;
     margin-left: 0px;
 }
+
+/* /Wininng Combinations Display */
+
 
 /* .royal-flush { 
       background-color: #d60000;
@@ -161,39 +182,8 @@
  */
 
 
-/* Cards */
-#card1,
-#card2,
-#card3,
-#card4,
-#card5  {
-    height: 26vw;
-    width: 17vw;
-    margin-top: 1.4vh;
-    display: inline-block;
-    padding-left: 0.3vw;
-    padding-right: 0.3vw;
-}
-
-
-.cards {
-     background: url(/assets/images/back-of-card.png) no-repeat center center;
-     background-size: contain;
-     height: 26vw;
-    width: 17vw;
-    margin-top: 1.4vh;
-    display: inline-block;
-     
-}
 
 /* Buttons */
-#play-container {
-    position: relative;
-    display: contents;
-    text-align: center;
-    margin-right: 6vw;
-    flex-flow: column;
-}
 
 .play-buttons {
     width: 10vh;
@@ -213,75 +203,66 @@
     color: yellow;
 }
 
-
-/* Card flip test */
+/* /buttons */
 
 .scene {
-  /* width: 200px;
-  height: 260px;
-  border: 1px solid #CCC;
-  margin: 40px 0;
-  perspective: 600px; */
     width: 100%;
     height: 24vw;
-    /* border: 1px solid #CCC; */
-    /* margin: 40px 0; */
     perspective: 600px;
     display: flex;
 }
 
-.card-1 {
-    margin-left: 0.3vw;
-}
-.card {
- /*  width: 100%;
-  height: 100%;
-  transition: transform 1s;
-  transform-style: preserve-3d;
-  cursor: pointer;
-  position: relative; */
+/* Cards */
 
-  position: relative;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-clip: border-box;
-    border: 1px solid rgba(0,0,0,.125);
-    border-radius: .25rem;
+/* Fetched image style */
+
+.cards {
+    height: 23vw;
+    width: 15vw;
+    display: inline-block;
+}
+
+/* /Fetched image style */
+
+.card {
     text-align: justify;
-    margin-left: auto;
-    width: 17vw;
+    width: 15vw;
     height: 100%;
     transition: transform 1s;
     transform-style: preserve-3d;
     cursor: pointer;
+    margin: 2vw;
+}
+
+/* Used for overwrite default card styles */
+
+#first-card,
+#second-card,
+#third-card,
+#fourth-card,
+#fifth-card {
+    background-color: #fff0;
+    border: none;
 }
 
 .card.is-flipped {
   transform: rotateY(180deg);
 }
 
-.card__face {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  line-height: 260px;
-  color: white;
-  text-align: center;
-  font-weight: bold;
-  font-size: 40px;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+/* Transfer style to card style wait maybe i will need it delete class from HTML if no need */
+.card-face {
+    position: absolute;
+    backface-visibility: hidden;
 }
 
-.card__face--front {
-  background: red;
+.card-face--front {
+   background: url(/assets/images/back-of-card.png) no-repeat center center;
+    background-size: contain;
+    height: 23vw;
+    width: 15vw;
+    display: inline-block;
 }
 
-.card__face--back {
-  background: blue;
+.card-face--back {
   transform: rotateY(180deg);
 }
