@@ -208,7 +208,7 @@
 
 .scene {
     width: 100%;
-    height: 24vw;
+    height: 23vw;
     perspective: 600px;
     display: flex;
 }
@@ -216,13 +216,11 @@
 /* Cards */
 
 /* Fetched image style */
-
 .cards {
     height: 23vw;
     width: 15vw;
     display: inline-block;
 }
-
 /* /Fetched image style */
 
 .card {
@@ -231,8 +229,7 @@
     height: 100%;
     transition: transform 1s;
     transform-style: preserve-3d;
-    cursor: pointer;
-    margin: 2vw;
+    margin: 0.1vw 2vw 0.1vw 2vw;
 }
 
 /* Used for overwrite default card styles */
@@ -246,6 +243,34 @@
     border: none;
 }
 
+/* /Used for overwrite default card styles */
+
+/* Animation Delay */
+
+#first-card {
+    transition: transform 1s;
+}
+
+#second-card {
+    transition-delay: 300ms;
+}
+
+#third-card { 
+    transition-delay: 600ms;
+}
+
+#fourth-card {
+    transition-delay: 900ms;
+}
+
+#fifth-card {
+    transition-delay: 1200ms;
+}
+
+/* /Animation Delay */
+
+/* Cards Faces */
+
 .card.is-flipped {
   transform: rotateY(180deg);
 }
@@ -255,6 +280,7 @@
     position: absolute;
     backface-visibility: hidden;
 }
+
 
 .card-face--front {
    background: url(/assets/images/back-of-card.png) no-repeat center center;
@@ -267,3 +293,26 @@
 .card-face--back {
   transform: rotateY(180deg);
 }
+
+/* Holding Card test */
+
+.hold {
+    color: #1d2124;
+    font-size: 1.7vw;
+    width: 9vw;
+    /* font-weight: 900; */
+    /* background: rgb(109 33 33); */
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(218,31,31,1) 50%, rgba(0,6,2,1) 100%);
+    border: 2px solid #fffe00;
+    border-radius: 20px;
+    margin-top: 0.5vw;
+    /* text-align: center;
+    vertical-align: middle; */
+    font-family: 'Alfa Slab One';
+}
+
+#hold-container {
+    justify-content: space-around;
+}
+
+

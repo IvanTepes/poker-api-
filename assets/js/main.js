@@ -11,6 +11,23 @@ $('.card').on('click', function() {
 })
 } */
 
+/* $(function(){
+    $('.hold-card').on('click',function(){
+       $(this).toggleClass('clicked');
+    });
+});
+ */
+
+let deck = [];
+
+
+
+
+
+
+
+/* working script */
+
 function flip() {
     $('.card').toggleClass('is-flipped');
 }
@@ -31,8 +48,8 @@ function drawCards() {
         };
     }
     // Cards Data
+    
     function selectCards(data) {
-
         let newDeck = data.cards;
         let firstDraw = newDeck.slice(0, 5);
         let cardValue;
@@ -42,30 +59,13 @@ function drawCards() {
         document.getElementById("card4").src = firstDraw[3].image;
         document.getElementById("card5").src = firstDraw[4].image;
 
-       
-
-
         console.log(firstDraw)
         console.log(newDeck)
         console.log(cardValue)
 
-
-
-
-        /* let cards = data.cards
-        let card1 = cards[0].image;
-        let card2 = cards[1].image;
-        let card3 = cards[2].image;
-        let card4 = cards[3].image;
-        let card5 = cards[4].image;
-        document.getElementById("card1").src = card1,
-        document.getElementById("card2").src = card2;
-        document.getElementById("card3").src = card3;
-        document.getElementById("card4").src = card4;
-        document.getElementById("card5").src = card5;
-        console.log(cards) */
-
     }
     getData(selectCards);
+    console.log(getData(selectCards))
 };
 
+/* /working script */
