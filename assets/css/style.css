@@ -217,8 +217,8 @@
 
 /* Fetched image style */
 .cards {
-    height: 23vw;
-    width: 15vw;
+    height: 22vw;
+    width: 14.1vw;
     display: inline-block;
 }
 /* /Fetched image style */
@@ -242,7 +242,6 @@
     background-color: #fff0;
     border: none;
 }
-
 /* /Used for overwrite default card styles */
 
 /* Animation Delay */
@@ -266,7 +265,6 @@
 #fifth-card {
     transition-delay: 1200ms;
 }
-
 /* /Animation Delay */
 
 /* Cards Faces */
@@ -275,24 +273,28 @@
   transform: rotateY(180deg);
 }
 
-/* Transfer style to card style wait maybe i will need it delete class from HTML if no need */
 .card-face {
-    position: absolute;
+    position: relative;
     backface-visibility: hidden;
 }
 
-
 .card-face--front {
    background: url(/assets/images/back-of-card.png) no-repeat center center;
-    background-size: contain;
-    height: 23vw;
-    width: 15vw;
+    background-size: cover;
+    height: 22vw;
+    width: 14vw;
     display: inline-block;
+    box-shadow: 0px 0px 20px 9px #000000;
+    border-radius: 1.1vw;
+    position: absolute;
 }
 
 .card-face--back {
   transform: rotateY(180deg);
+    box-shadow: 0px 0px 20px 9px #000000;
+    border-radius: 1.1vw;
 }
+/* /Cards Faces */
 
 /* Holding Card test */
 
@@ -300,14 +302,11 @@
     color: #1d2124;
     font-size: 1.7vw;
     width: 9vw;
-    /* font-weight: 900; */
-    /* background: rgb(109 33 33); */
-    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(218,31,31,1) 50%, rgba(0,6,2,1) 100%);
-    border: 2px solid #fffe00;
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgb(101 72 72) 50%, rgba(0,6,2,1) 100%);
+    border: 2px solid #0c0c0c;
+    box-shadow: 0px 0px 11px 1px #000000;
     border-radius: 20px;
     margin-top: 0.5vw;
-    /* text-align: center;
-    vertical-align: middle; */
     font-family: 'Alfa Slab One';
 }
 
@@ -315,4 +314,19 @@
     justify-content: space-around;
 }
 
+.hold-active {
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(161,23,23,1) 18%, rgb(255 0 0) 50%, rgba(161,23,23,1) 80%, rgba(0,6,2,1) 100%);
+    color: #000000;
+    box-shadow: inset 0px 0px 17px 3px #000000, 0px 0px 11px 1px #e4cc1b;
+}
 
+
+/* Bet */
+
+.bet {
+    color: red;
+    background-color: black;
+    text-align: center;
+    width: 100%;
+    font-family: 'Orbitron', sans-serif;
+}

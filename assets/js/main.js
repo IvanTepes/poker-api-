@@ -18,14 +18,17 @@ $('.card').on('click', function() {
 });
  */
 
-let deck = [];
 
 
+ $('.hold').click(function() {
+     $(this).toggleClass("hold-active");
+ });
 
+$('.card-face--front').click(function() {
+     $(".hold").toggleClass("hold-active");
+ });
 
-
-
-
+ /////////////////////////////////////////////////////////////////////////////////////////
 /* working script */
 
 function flip() {

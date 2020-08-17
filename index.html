@@ -12,7 +12,7 @@
 	<!-- Poker Javascript-->
 
 	<!-- <script type="text/javascript" src="testing.js"></script> -->
-	<script type="text/javascript" src="assets/js/main.js"></script>
+	<!-- <script type="text/javascript" src="assets/js/main.js"></script> -->
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
@@ -80,7 +80,7 @@
             <!-- Code inspiration from https://3dtransforms.desandro.com/  -->           
 			<div class="container-fluid cards-container ">
 				<div class="scene row">
-					<div class="card col" id="first-card" onclick="flip()">
+					<div class="card col" id="first-card">
 						<div class="card-face card-face--front"></div>
 						<div class="card-face card-face--back">
                             <img class="cards" id="card1"
@@ -88,7 +88,7 @@
 			                </img>
                         </div>
 					</div>
-                    <div class="card col" id="second-card" onclick="flip()">
+                    <div class="card col" id="second-card">
 						<div class="card-face card-face--front"></div>
 						<div class="card-face card-face--back">
                             <img class="cards" id="card2" 
@@ -96,7 +96,7 @@
 			                </img>
                         </div>
 					</div>
-                    <div class="card col" id="third-card" onclick="flip()">
+                    <div class="card col" id="third-card">
 						<div class="card-face card-face--front"></div>
 						<div class="card-face card-face--back">
                             <img class="cards" id="card3" 
@@ -104,7 +104,7 @@
 			                </img>
                         </div>
 					</div>
-                    <div class="card col" id="fourth-card" onclick="flip()">
+                    <div class="card col" id="fourth-card">
 						<div class="card-face card-face--front"></div>
 						<div class="card-face card-face--back">
                             <img class="cards" id="card4"
@@ -112,7 +112,7 @@
 			                </img>
                         </div>
 					</div>
-                    <div class="card col" id="fifth-card" onclick="flip()">
+                    <div class="card col" id="fifth-card">
 						<div class="card-face card-face--front"></div>
 						<div class="card-face card-face--back">
                             <img class="cards" id="card5"
@@ -123,11 +123,11 @@
 				</div>
                 <div class="container-fluid hold-container">
                     <div class="row" id="hold-container">
-                        <div class="hold">HOLD</div>
-                        <div class="hold">HOLD</div>
-                        <div class="hold">HOLD</div>
-                        <div class="hold">HOLD</div>
-                        <div class="hold">HOLD</div>
+                        <div role="button" class="hold">HOLD</div>
+                        <div role="button" class="hold">HOLD</div>
+                        <div role="button" class="hold">HOLD</div>
+                        <div role="button" class="hold">HOLD</div>
+                        <div role="button" class="hold">HOLD</div>
 
                     </div>
                 </div>
@@ -140,7 +140,9 @@
 				<div class="container" id="play-container">
 					<div class="row">
                         <div role="button" class="col play-buttons menu">MENU</div>
-                        <div role="button" class="col play-buttons bet">BET</div>
+                        <div role="button" class="col play-buttons bet">
+                            <input class="bet" type="text" size="4" name="bet" value="100">
+                        </div>
                         <div role="button" class="col play-buttons double">DOUBLE</div>
 					    <div role="button" id="deal" class="col play-buttons deal" type="button" onclick="drawCards(), flip()">
 							&nbspD&nbspE&nbspA&nbspL&nbsp</div>
@@ -157,6 +159,7 @@
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
 		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
 	</script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
 		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
 	</script>
