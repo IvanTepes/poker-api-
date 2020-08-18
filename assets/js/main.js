@@ -24,10 +24,12 @@ $('.card').on('click', function() {
      $(this).toggleClass("hold-active");
  });
 
-$('.card-face--front').click(function() {
-     $(".hold").toggleClass("hold-active");
+$('.new-game-button').click(function() {
+     $(".menu-container").toggleClass("hidden");
  });
 
+
+ 
  /////////////////////////////////////////////////////////////////////////////////////////
 /* working script */
 

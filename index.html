@@ -18,6 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Recursive:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Goblin+One&display=swap" rel="stylesheet">
 
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
@@ -29,6 +30,32 @@
 
 <div class="container-fluid game-screen">
             <!-- <div class="loading"></div> -->
+            <div class="container-fluid menu-container">
+                <div class="menu-logo"></div>
+                <div class="row mx-auto menu">
+                    <div class="col menu-items-container new-game">
+                        <div class="row button-container">
+                            <div role="button" 
+                                 id="new-game" 
+                                 class="col-7 new-game-button">New Game</div>
+                        </div>
+                    </div>
+                    <div class="col menu-items-container records">
+                        <div class="row button-container">
+                            <div role="button"
+                                 id="records"
+                                 class="col-7 records-button">Records</div>
+                        </div>
+                    </div>
+                    <div class="col menu-items-container settings">
+                        <div class="row button-container">
+                            <div role="button" 
+                                 id="settings"
+                                class="col-7 settings-button">Settings</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="container-fluid info">
                 <div class="row">
                     <div class="col">
@@ -139,7 +166,7 @@
 			<div class="container-fluid play">
 				<div class="container" id="play-container">
 					<div class="row">
-                        <div role="button" class="col play-buttons menu">MENU</div>
+                        <div role="button" class="col play-buttons menu-button">MENU</div>
                         <div role="button" class="col play-buttons bet">
                             <input class="bet" type="text" size="4" name="bet" value="100">
                         </div>
