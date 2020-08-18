@@ -2,7 +2,7 @@
 /* Game Menu */
 
 .menu-container {
-    background: url("/assets/images/back.jpg") repeat center center; 
+    background: url("../images/back.jpg") repeat center center; 
     box-shadow: 0px 0px 7px 5px black, inset 0px 0px 20px 20px #000000;
     z-index: 10;
     height: 100%;
@@ -14,7 +14,7 @@
  .menu-logo {
     height: 16vw;
     margin-top: 2vw;
-    background: url("/assets/images/logo.png") no-repeat center center; 
+    background: url("../images/logo.png") no-repeat center center; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -94,7 +94,7 @@
     background-size: cover; 
     /* background: rgb(24,128,60);
     background: linear-gradient(180deg, rgba(15,68,33,1) 0%, rgba(1,64,23,1) 50%, rgba(0,6,2,1) 100%); */
-    background: url("/assets/images/back.jpg") repeat center center; 
+    background: url("../images/back.jpg") repeat center center; 
  }
 
 /* Game Sections */
@@ -174,7 +174,7 @@
 
 .logo {
     height: 25vh;
-    background: url("/assets/images/logo.png") no-repeat center center; 
+    background: url("../images/logo.png") no-repeat center center; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -363,7 +363,7 @@
 }
 
 .card-face--front {
-   background: url("/assets/images/back-of-card.png") no-repeat center center;
+   background: url("../images/back-of-card.png") no-repeat center center;
     background-size: cover;
     height: 22vw;
     width: 14vw;
