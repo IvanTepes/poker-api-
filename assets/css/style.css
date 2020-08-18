@@ -100,19 +100,20 @@
 /* Game Sections */
 
  .info {
-     height: 30vh;
-     margin-bottom: 2vh;
-     padding-top: 2vh;
+    height: 16vw;
+    margin-bottom: 0.5vw;
+    padding-top: 1.5vw;
  }
 
  .cards-container {
-    height: 50vh;
-    margin-bottom: 2vh;
+    height: 28vw;
+    margin-bottom: 1vw;
     text-align: center;
  }
 
  .play {
-     height:15vh;
+    height: 8vw;
+    padding-top: 1.5vw;
  }
 
  #play-container {
@@ -173,7 +174,7 @@
 /* /Counters Containers */
 
 .logo {
-    height: 25vh;
+    height: 15vw;
     background: url("../images/logo.png") no-repeat center center; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -184,7 +185,7 @@
 /* Wininng Combinations Display */
 
 .combinations {
-    height: 23.5vh;
+    height: 15vw;
     width: 100%;
     border: 2px solid #ffffff;
     box-shadow: 0px 0px 7px 5px black, inset 0px 0px 6px 7px #7d7d7d;
