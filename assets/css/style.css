@@ -21,13 +21,17 @@
     background-size: contain; 
 }
  
+ #menu {
+     width: 30vw;
+ }
+
 .menu {
     background-color: black;
     flex-direction: column;
-    height: 30vw;
     width: 30vw;
+    display: grid;
+    height: 22vw;
     position: relative;
-    margin-top: 1vw;
     border: 2px solid gray;
     border-radius: 4vw;
     box-shadow: 0px 0px 7px 5px black, inset 0px 0px 20px 1px #ffffff;
@@ -36,8 +40,8 @@
 .menu-items-container {
     color: #ffe92d;
     text-align: center;
-    margin: auto;
-    padding-top: 3.4vw;
+    padding-top: 2vw;
+    display: inline;
 }
 
 /* Button Container */
