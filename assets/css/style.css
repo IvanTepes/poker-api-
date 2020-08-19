@@ -81,6 +81,11 @@
   transition: visibility 0s 5s, opacity 2s linear;
 }
 
+.visible {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 2s linear;
+}
 
 
 
@@ -113,7 +118,6 @@
 
  .play {
     height: 8vw;
-    padding-top: 1.5vw;
  }
 
  #play-container {

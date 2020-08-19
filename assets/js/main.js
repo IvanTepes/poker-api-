@@ -18,7 +18,7 @@ $('.card').on('click', function() {
 });
  */
 
-
+/* Main Menu buttons*/
 
  $('.hold').click(function() {
      $(this).toggleClass("hold-active");
@@ -26,6 +26,14 @@ $('.card').on('click', function() {
 
 $('.new-game-button').click(function() {
      $(".menu-container").toggleClass("hidden");
+ });
+
+ $('.menu-button').click(function() {
+     $('.menu-container').removeClass('hidden').addClass('visible');
+ });
+
+ $('.menu-button').click(function() {
+     $('.menu-container').removeClass('visible');
  });
 
 
