@@ -1,13 +1,5 @@
 
-/* html {
-    height: 100vw;
-    position: fixed;
-}
- */
-/* html, body {
-    min-height: 100%
-}
- */
+
 body {
     position: absolute;
     left: 0;
@@ -17,7 +9,6 @@ body {
 }
 
 /* Game Menu */
-
 .menu-container {
     background: url("../images/back.jpg") repeat center center; 
     box-shadow: 0px 0px 7px 5px black, inset 0px 0px 20px 20px #000000;
@@ -33,7 +24,7 @@ body {
     width: 100vw;
 }
 
- .menu-logo {
+.menu-logo {
     height: 30vh;
     margin-top: 5vh;
     background: url("../images/logo.png") no-repeat center center; 
@@ -43,9 +34,9 @@ body {
     background-size: contain; 
 }
  
- #menu {
-     width: 30vw;
- }
+#menu {
+    width: 30vw;
+}
 
 .menu {
     background-color: black;
@@ -66,7 +57,6 @@ body {
 }
 
 /* Button Container */
-
 .button-container {
     justify-content: center;
 }
@@ -93,13 +83,10 @@ body {
     background-color: red;
     box-shadow: 0px 0px 12px 1px #ff0909, inset 0px 0px 20px 6px #000000;
 }
-/* /Button Container */
-/* /Game Menu */
+/* /button container */
+/* /game menu */
 
-
-
-
-/* button click */
+/* Button Click */
 .hidden {
   visibility: hidden;
   opacity: 0;
@@ -111,14 +98,39 @@ body {
   opacity: 1;
   transition: opacity 2s linear;
 }
-/* button click */
+/* /button click */
 
-.play {
+/* Game Buttons */
+.game-buttons {
     height: 10vh;
     position: relative;
 }
 
- .game-screen {
+#game-buttons-container {
+    position: relative;
+    display: contents;
+    text-align: center;
+    margin-right: 6vw;
+    flex-flow: column;
+}
+
+.play-buttons {
+    margin: 1vw;
+    font-family: Recursive;
+    font-size: 1.7vw;
+    width: 10vw;
+    border-radius: 10px;
+    background-color: black;
+    color: red;
+    background: linear-gradient(180deg, rgb(0 0 0) 0%, rgb(43 43 43) 50%, rgba(0,6,2,1) 100%);
+    border: 2px solid #bfbfbf;
+    box-shadow: inset 0px 0px 8px 0px #ffffff;
+    text-shadow: 0 0 14px #000000, 0px 0px 20px #000000;
+}
+/* /game-buttons */
+
+/* Game Sections */
+.game-screen {
     height: 100vh;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -131,8 +143,6 @@ body {
     top: 0px;
     left: 0px; 
  }
-
-/* Game Sections */
 
 .info {
     height: 30vh;
@@ -160,18 +170,11 @@ body {
     text-align: center;
  } */
 
- #play-container {
-    position: relative;
-    display: contents;
-    text-align: center;
-    margin-right: 6vw;
-    flex-flow: column;
-}
+ 
 
  /* /Game Sections */
 
 /* Counters Containers */
-
  .credit {
     height: 6vw;
     width: 100%;
@@ -214,8 +217,7 @@ body {
 .wins {
     color: yellow;
 }
-
-/* /Counters Containers */
+/* /counters Containers */
 
 .logo {
     height: 15vw;
@@ -227,7 +229,6 @@ body {
 }
 
 /* Wininng Combinations Display */
-
 .combinations {
     height: 13vw;
     width: 100%;
@@ -259,8 +260,7 @@ body {
     margin-right: 0px;
     margin-left: 0px;
 }
-
-/* /Wininng Combinations Display */
+/* /wininng Combinations Display */
 
 
 /* .royal-flush { 
@@ -314,27 +314,6 @@ body {
 }
  */
 
-
-
-/* Buttons */
-
-.play-buttons {
-    margin: 1vw;
-    font-family: Recursive;
-    font-size: 1.7vw;
-    width: 10vw;
-    border-radius: 10px;
-    background-color: black;
-    color: red;
-    background: linear-gradient(180deg, rgb(0 0 0) 0%, rgb(43 43 43) 50%, rgba(0,6,2,1) 100%);
-    border: 2px solid #bfbfbf;
-    box-shadow: inset 0px 0px 8px 0px #ffffff;
-    text-shadow: 0 0 14px #000000, 0px 0px 20px #000000;
-}
-
-
-/* /buttons */
-
 .scene {
     width: 100%;
     height: 23vw;
@@ -350,7 +329,7 @@ body {
     width: 14.1vw;
     display: inline-block;
 }
-/* /Fetched image style */
+/* /fetched image style */
 
 .card {
     text-align: justify;
@@ -371,10 +350,9 @@ body {
     background-color: #fff0;
     border: none;
 }
-/* /Used for overwrite default card styles */
+/* /used for overwrite default card styles */
 
 /* Animation Delay */
-
 #first-card {
     transition: transform 1s;
 }
@@ -394,10 +372,9 @@ body {
 #fifth-card {
     transition-delay: 1200ms;
 }
-/* /Animation Delay */
+/* /animation Delay */
 
 /* Cards Faces */
-
 .card.is-flipped {
   transform: rotateY(180deg);
 }
@@ -423,7 +400,7 @@ body {
     box-shadow: 0px 0px 20px 9px #000000;
     border-radius: 1.1vw;
 }
-/* /Cards Faces */
+/* /cards faces */
 
 /* Holding Card test */
 
