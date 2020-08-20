@@ -17,7 +17,7 @@ body {
     background: url("../images/back.jpg") repeat center center; 
     box-shadow: 0px 0px 7px 5px black, inset 0px 0px 20px 20px #000000;
     z-index: 10;
-    height: 100vh;
+    height: 100vmin;
     position: absolute;
     top: 0;
     left: 0;
@@ -30,7 +30,7 @@ body {
 }
  .menu-logo {
     height: 30vh;
-    margin-top: 2vh;
+    margin-top: 5vh;
     background: url("../images/logo.png") no-repeat center center; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
