@@ -21,7 +21,6 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    /* overflow: hidden; */
 }
 
 #game,
@@ -111,6 +110,7 @@ body {
 
 .play {
     height: 10vh;
+    position: relative;
 }
 
  .game-screen {
@@ -127,17 +127,31 @@ body {
 
 /* Game Sections */
 
- .info {
+.info {
+    height: 30vh;
+    margin-bottom: 1.5vh;
+    padding-top: 3.5vh;
+    position: relative
+}
+
+ /* .info {
     height: 16vw;
     margin-bottom: 0.5vw;
     padding-top: 1.5vw;
  }
+ */
+ .card-container {
+    height: 50vh;
+    margin-bottom: 3vh;
+    text-align: center;
+    position: relative;
 
- .cards-container {
+ }
+ /* .cards-container {
     height: 28vw;
     margin-bottom: 1vw;
     text-align: center;
- }
+ } */
 
  #play-container {
     position: relative;
