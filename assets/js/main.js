@@ -32,9 +32,6 @@ $('.new-game-button').click(function() {
      $(".game-screen").removeClass("hidden").addClass('visible');
  });
 
-
-
-
  $('.menu-button').click(function() {
      $('.menu-container').removeClass('hidden').addClass('visible');
  });
@@ -43,6 +40,7 @@ $('.new-game-button').click(function() {
      $('.menu-container').removeClass('visible');
  });
 
+ 
  /* $('.new-game-button').on('click',function() {
     if($("menu-container").hasClass("menu_hide")){
         $("#showname1").removeClass("menu_hide").addClass("menu_show");
