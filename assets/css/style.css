@@ -8,7 +8,7 @@ html {
 }
  */
 body {
-    position: fixed;
+    position: relative;
 }
 
 /* Game Menu */
@@ -17,7 +17,7 @@ body {
     background: url("../images/back.jpg") repeat center center; 
     box-shadow: 0px 0px 7px 5px black, inset 0px 0px 20px 20px #000000;
     z-index: 10;
-    height: 100vmin;
+    height: 100vh;
     position: absolute;
     top: 0;
     left: 0;
@@ -27,6 +27,7 @@ body {
 #menu-container {
     width: 100vw;
 }
+
  .menu-logo {
     height: 30vh;
     margin-top: 5vh;
@@ -44,7 +45,6 @@ body {
 .menu {
     background-color: black;
     flex-direction: column;
-    width: 40vh;
     display: grid;
     height: 22vw;
     position: relative;
@@ -122,7 +122,9 @@ body {
     /* background: rgb(24,128,60);
     background: linear-gradient(180deg, rgba(15,68,33,1) 0%, rgba(1,64,23,1) 50%, rgba(0,6,2,1) 100%); */
     background: url("../images/back.jpg") repeat center center;
-    position: absolute; 
+    position: absolute;
+    top: 0px;
+    left: 0px; 
  }
 
 /* Game Sections */
@@ -430,6 +432,7 @@ body {
     border-radius: 20px;
     margin-top: 0.5vw;
     font-family: 'Alfa Slab One';
+    text-align: center;
 }
 
 #hold-container {
