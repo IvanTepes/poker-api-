@@ -3,10 +3,10 @@ html {
     font-size: calc(1em + 1vw)
 }
 
-html, body {
+/* html, body {
     min-height: 100%
 }
-
+ */
 body {
     position: fixed;
 }
@@ -45,7 +45,7 @@ body {
 .menu {
     background-color: black;
     flex-direction: column;
-    width: 30vw;
+    width: 40vh;
     display: grid;
     height: 22vw;
     position: relative;
@@ -107,11 +107,12 @@ body {
   opacity: 1;
   transition: opacity 2s linear;
 }
-
-
-
-
 /* button click */
+
+.play {
+    height: 10vh;
+}
+
  .game-screen {
     height: 100vh;
   -webkit-background-size: cover;
@@ -121,7 +122,7 @@ body {
     /* background: rgb(24,128,60);
     background: linear-gradient(180deg, rgba(15,68,33,1) 0%, rgba(1,64,23,1) 50%, rgba(0,6,2,1) 100%); */
     background: url("../images/back.jpg") repeat center center;
-    position: fixed; 
+    position: absolute; 
  }
 
 /* Game Sections */
@@ -136,10 +137,6 @@ body {
     height: 28vw;
     margin-bottom: 1vw;
     text-align: center;
- }
-
- .play {
-    height: 8vw;
  }
 
  #play-container {
