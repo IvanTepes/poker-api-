@@ -17,13 +17,16 @@ body {
     background: url("../images/back.jpg") repeat center center; 
     box-shadow: 0px 0px 7px 5px black, inset 0px 0px 20px 20px #000000;
     z-index: 10;
-    height: 100%;
-    position: fixed;
+    height: 100vh;
+    position: absolute;
     top: 0;
     left: 0;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
+#menu-container {
+    width: 100vw;
+}
  .menu-logo {
     height: 16vw;
     margin-top: 2vw;
