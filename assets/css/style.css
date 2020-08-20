@@ -26,7 +26,7 @@ body {
 
 .menu-logo {
     height: 30vh;
-    margin-top: 5vh;
+    margin: 5vh;
     background: url("../images/logo.png") no-repeat center center; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -42,12 +42,15 @@ body {
     background-color: black;
     flex-direction: column;
     display: grid;
-    height: 22vw;
+    margin: 5vh;
+    height: 40vh;
     position: relative;
     border: 2px solid gray;
     border-radius: 4vw;
-    box-shadow: 0px 0px 7px 5px black, inset 0px 0px 20px 1px #ffffff;
+    box-shadow: 0px 0px 5vh 2vh black, inset 0px 0px 1vh 0.2vh #ffffff;
 }
+
+
 
 .menu-items-container {
     color: #ffe92d;
@@ -66,12 +69,13 @@ body {
 .settings-button {
     background-color: #580200;
     font-family: 'Goblin One', cursive;
-    font-size: 1.5vw;
+    font-size: 1.5em;
     border-radius: 1vw;
-    box-shadow: 0px 0px 12px 1px #f7df00, inset 0px 0px 20px 1px #000000;
-    border: 1px solid gray;
+    /* box-shadow: 0px 0px 12px 1px #f7df00, inset 0px 0px 20px 1px #000000; */
+    box-shadow: inset 0px 0px 20px 1px #000000;
+    border: 2px solid gray;
     height: 3vw;
-    padding-top: 0.5vw;
+    padding-top: 0.4vw;
     text-shadow: 0px 0px 20px #000000;
 }
 
@@ -104,6 +108,7 @@ body {
 .game-buttons {
     height: 10vh;
     position: relative;
+    margin-top: 2vh;
 }
 
 #game-buttons-container {
@@ -144,22 +149,24 @@ body {
     left: 0px; 
  }
 
-.info {
+.info-container {
     height: 30vh;
-    margin-bottom: 1.5vh;
-    padding-top: 3.5vh;
+    margin: 1vh;
     position: relative
 }
 
+.info-items {
+    margin: 2vh;
+}
  /* .info {
     height: 16vw;
     margin-bottom: 0.5vw;
     padding-top: 1.5vw;
  }
  */
- .card-container {
+ .cards-container {
     height: 50vh;
-    margin-bottom: 3vh;
+    margin-bottom: 1vh;
     text-align: center;
     position: relative;
 
@@ -190,11 +197,28 @@ body {
     margin-bottom: 1vw;
     background-color: black;
     color: red;
-    box-shadow: 0px 0px 7px 5px black, inset 0px 0px 20px 1px #ffffff;
+    box-shadow: 0px 0px 7px 5px black, inset 0px 0px 1vh 0.2vh #ffffff;
 }
 
- .credit-remaining {
-     color: yellow;
+.credit-remaining-text {
+    color: red;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin: 2.1vh;
+    padding-left: 1vh;
+    font-size: 2.5vw;
+}
+
+.credit-remaining-value {
+    color: yellow;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin: 2.1vh;
+    font-size: 2.5vw;
+    padding-right: 1vh;
+
  }
 
  .wins-container {
@@ -211,10 +235,14 @@ body {
     background-color: black;
     color: red;
     border-radius: 20px;
-    box-shadow: 0px 0px 7px 5px black, inset 0px 0px 20px 1px #ffffff;
+    box-shadow: 0px 0px 7px 5px black, inset 0px 0px 1vh 0.2vh #ffffff;
  }
 
-.wins {
+.wins-text {
+    color: yellow;
+}
+
+.wins-value {
     color: yellow;
 }
 /* /counters Containers */
@@ -408,7 +436,7 @@ body {
     color: #1d2124;
     font-size: 1.7vw;
     width: 9vw;
-    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgb(101 72 72) 50%, rgba(0,6,2,1) 100%);
+    background: linear-gradient(180deg, rgb(25 25 25) 0%, rgb(101 72 72) 50%, rgb(25 25 25) 100%);
     border: 2px solid #0c0c0c;
     box-shadow: 0px 0px 11px 1px #000000;
     border-radius: 20px;
@@ -416,6 +444,7 @@ body {
     font-family: 'Alfa Slab One';
     text-align: center;
 }
+
 
 #hold-container {
     justify-content: space-around;
