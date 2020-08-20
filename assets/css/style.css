@@ -108,7 +108,7 @@ body {
 .game-buttons {
     height: 10vh;
     position: relative;
-    margin-top: 2vh;
+    margin-top: 7vh;
 }
 
 #game-buttons-container {
@@ -169,6 +169,7 @@ body {
     margin-bottom: 1vh;
     text-align: center;
     position: relative;
+    margin-top: 2vh;
 
  }
  /* .cards-container {
@@ -445,7 +446,9 @@ body {
     text-align: center;
 }
 
-
+.hold-container {
+    margin-top: 3vh;
+}
 #hold-container {
     justify-content: space-around;
 }
