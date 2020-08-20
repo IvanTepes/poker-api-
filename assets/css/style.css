@@ -129,7 +129,7 @@ body {
     color: red;
     background: linear-gradient(180deg, rgb(0 0 0) 0%, rgb(43 43 43) 50%, rgba(0,6,2,1) 100%);
     border: 2px solid #bfbfbf;
-    box-shadow: inset 0px 0px 8px 0px #ffffff;
+    box-shadow: 0px 0px 1vh 0.2vh black, inset 0px 0px 1vh 0.2vh #ffffff;;
     text-shadow: 0 0 14px #000000, 0px 0px 20px #000000;
 }
 /* /game-buttons */
@@ -198,7 +198,7 @@ body {
     margin-bottom: 1vw;
     background-color: black;
     color: red;
-    box-shadow: 0px 0px 7px 5px black, inset 0px 0px 1vh 0.2vh #ffffff;
+    box-shadow: 0px 0px 1vh 0.2vh black, inset 0px 0px 1vh 0.2vh #ffffff;;
 }
 
 .credit-remaining-text {
@@ -236,7 +236,7 @@ body {
     background-color: black;
     color: red;
     border-radius: 20px;
-    box-shadow: 0px 0px 7px 5px black, inset 0px 0px 1vh 0.2vh #ffffff;
+    box-shadow: 0px 0px 1vh 0.2vh black, inset 0px 0px 1vh 0.2vh #ffffff;;
  }
 
 .wins-text {
@@ -262,7 +262,7 @@ body {
     height: 13vw;
     width: 100%;
     border: 2px solid #ffffff;
-    box-shadow: 0px 0px 7px 5px black, inset 0px 0px 6px 7px #7d7d7d;
+    box-shadow: 0px 0px 1vh 0.2vh black, inset 0px 0px 6px 7px #7d7d7d;
     position: relative;
     display: table;
     border-radius: 20px;
@@ -419,14 +419,14 @@ body {
     height: 22vw;
     width: 14vw;
     display: inline-block;
-    box-shadow: 0px 0px 20px 9px #000000;
+    box-shadow: 0px 0px 1vh 0.5vh black;
     border-radius: 1.1vw;
     position: absolute;
 }
 
 .card-face--back {
   transform: rotateY(180deg);
-    box-shadow: 0px 0px 20px 9px #000000;
+    box-shadow: 0px 0px 1vh 0.2vh black;
     border-radius: 1.1vw;
 }
 /* /cards faces */
@@ -439,7 +439,7 @@ body {
     width: 9vw;
     background: linear-gradient(180deg, rgb(25 25 25) 0%, rgb(101 72 72) 50%, rgb(25 25 25) 100%);
     border: 2px solid #0c0c0c;
-    box-shadow: 0px 0px 11px 1px #000000;
+    box-shadow: 0px 0px 1vh 0.5vh black;
     border-radius: 20px;
     margin-top: 0.5vw;
     font-family: 'Alfa Slab One';
