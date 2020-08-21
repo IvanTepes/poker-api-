@@ -29,20 +29,20 @@
 <body>
 
 <!-- Menu -->
-<div class="container-fluid menu-container" id="menu-container">
-	<div class="menu-logo"></div>
-	<div class="row mx-auto container menu" id="menu">
-		<div class="col menu-items-container new-game">
+<div class="container-fluid main-menu-container" id="menu-container">
+	<div class="main-menu-logo"></div>
+	<div class="row mx-auto container main-menu" id="main-menu">
+		<div class="col main-menu-items-container new-game">
 			<div class="row button-container">
 				<div role="button" id="new-game" class="col-8 new-game-button">New Game</div>
 			</div>
 		</div>
-		<div class="col menu-items-container records">
+		<div class="col main-menu-items-container records">
 			<div class="row button-container">
 				<div role="button" id="records" class="col-8 records-button">Records</div>
 			</div>
 		</div>
-		<div class="col menu-items-container settings">
+		<div class="col main-menu-items-container main-menu-item-settings">
 			<div class="row button-container">
 				<div role="button" id="settings" class="col-8 settings-button">Settings</div>
 			</div>
@@ -50,30 +50,36 @@
 	</div>
 </div>
 
-<!-- <div class="container-fluid hidden">
-    <div class="row">
-        <div class="col">
-            <h1>Settings</h1>
+<div class="container-fluid settings-menu-screen hidden">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="settings-heading">SETTINGS</div>
+            </div>
+        </div>
+    </div>
+    <div class="row mx-auto" id="settings-menu-container" >
+        <div class="col settings-menu">
             <h2>Sound</h2>
             <button>On/Off</button>
             <h2>Background</h2>
-            <div class="container">
-                <div class="holder"></div>
-                <div class="holder"></div>
-                <div class="holder"></div>
+            <div class="container theme-container">
+                <div class="theme holder">1</div>
+                <div class="theme holder">2</div>
+                <div class="theme holder">3</div>
             </div>
             <h2>Card Style</h2>
-            <div class="container">
-                <div class="holder"></div>
-                <div class="holder"></div>
-                <div class="holder"></div>
+            <div class="container theme-container">
+                <div class="theme holder">1</div>
+                <div class="theme holder">2</div>
+                <div class="theme holder">3</div>
             </div>
-        </div>
-        <div class="container">
+            <div class="container">
             <button>Main Menu</button>
         </div>
+        </div>
     </div>
-</div> -->
+</div>
 <!-- /menu -->
 
 <div class="container-fluid game-screen hidden" id="game">

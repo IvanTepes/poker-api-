@@ -1,5 +1,4 @@
 
-
 body {
     position: absolute;
     left: 0;
@@ -8,8 +7,8 @@ body {
     height: 100vh;
 }
 
-/* Game Menu */
-.menu-container {
+/* Game Main Menu */
+.main-menu-container {
     background: url("../images/back.jpg") repeat center center; 
     box-shadow: 0px 0px 7px 5px black, inset 0px 0px 20px 20px #000000;
     z-index: 10;
@@ -24,7 +23,7 @@ body {
     width: 100vw;
 }
 
-.menu-logo {
+.main-menu-logo {
     height: 30vh;
     margin: 5vh;
     background: url("../images/logo.png") no-repeat center center; 
@@ -34,11 +33,12 @@ body {
     background-size: contain; 
 }
  
-#menu {
+#main-menu,
+#settings-menu-container {
     width: 30vw;
 }
 
-.menu {
+.main-menu {
     background-color: black;
     flex-direction: column;
     display: grid;
@@ -50,16 +50,20 @@ body {
     box-shadow: 0px 0px 5vh 2vh black, inset 0px 0px 1vh 0.2vh #ffffff;
 }
 
-
-
-.menu-items-container {
+.main-menu-items-container {
     color: #ffe92d;
     text-align: center;
     padding-top: 2vw;
     display: inline;
 }
 
-/* Button Container */
+.main-menu-item-settings {
+    color: #ffe92d;
+    text-align: center;
+    padding-top: 2vw;
+    display: inline;
+}
+/* Main Menu Button Container */
 .button-container {
     justify-content: center;
 }
@@ -87,7 +91,54 @@ body {
     background-color: red;
     box-shadow: 0px 0px 12px 1px #ff0909, inset 0px 0px 20px 6px #000000;
 }
-/* /button container */
+/* /main menu button container */
+
+/* Settings */
+.settings-menu-screen {
+    background: url(../images/back.jpg) repeat center center;
+    box-shadow: 0px 0px 7px 5px black, inset 0px 0px 20px 20px #000000;
+    z-index: 10;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.settings-heading {
+    text-align: center;
+    margin: 5vh;
+    margin-top: 10vh;
+    font-size: 7vh;
+    font-family: 'Goblin One', cursive;
+    background-color: black;
+    color: transparent;
+    text-shadow: 0px 2px 1px rgb(255 255 0), 1px 1px 20px black, 0px 0px 20px black;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+}
+
+.settings-menu {
+    color: yellow;
+    text-align: center;
+    margin: 1vh;
+    border: 2px solid #797979;
+    background-color: black;
+    border-radius: 20px;
+    padding: 2vh;
+}
+
+.theme {
+    height: 10vh;
+    width: 10vh;
+}
+
+.theme-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* /settings */
 /* /game menu */
 
 /* Button Click */
@@ -108,7 +159,7 @@ body {
 .game-buttons {
     height: 10vh;
     position: relative;
-    margin-top: 4vh;
+    margin-top: 5vh;
 }
 
 #game-buttons-container {
@@ -130,6 +181,46 @@ body {
     border: 2px solid #bfbfbf;
     box-shadow: 0px 0px 1vh 0.2vh black, inset 0px 0px 1vh 0.2vh #ffffff
 }
+
+.bet-button {
+    color: red;
+    background-color: black;
+    text-align: center;
+    width: 100%;
+    font-family: 'Orbitron', sans-serif;
+    padding-top: 0.1vh;
+}
+
+.in-game-menu-button {
+    color: yellow;
+}
+
+/* Hold Card Button */
+.hold {
+    color: #1d2124;
+    font-size: 1.7vw;
+    width: 9vw;
+    background: red;
+    border: 2px solid #0c0c0c;
+    box-shadow: 0px 0px 1vh 0.1vh black, inset 0px 0px 4vh 1.1vh black;
+    border-radius: 20px;
+    margin-top: 0.5vw;
+    font-family: 'Alfa Slab One';
+    text-align: center;
+}
+
+#hold-container {
+    justify-content: space-around;
+}
+
+.hold-active {
+    background: red;
+    color: #000000;
+    box-shadow: inset 0px 0px 1vh 0.1vh #000000, 0px 0px 1vh 0.1vh 
+    yellow;
+}
+
+/* /hold-card-button */
 /* /game-buttons */
 
 /* Game Sections */
@@ -139,8 +230,6 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
     background-size: cover; 
-    /* background: rgb(24,128,60);
-    background: linear-gradient(180deg, rgba(15,68,33,1) 0%, rgba(1,64,23,1) 50%, rgba(0,6,2,1) 100%); */
     background: url("../images/back.jpg") repeat center center;
     position: absolute;
     top: 0px;
@@ -157,29 +246,15 @@ body {
     margin: 2vh;
     padding: 0px !important;
 }
- /* .info {
-    height: 16vw;
-    margin-bottom: 0.5vw;
-    padding-top: 1.5vw;
- }
- */
- .cards-container {
+
+.cards-container {
     height: 50vh;
-    margin-bottom: 1vh;
+    margin-bottom: 2vh;
     text-align: center;
     position: relative;
     margin-top: 2vh;
-
- }
- /* .cards-container {
-    height: 28vw;
-    margin-bottom: 1vw;
-    text-align: center;
- } */
-
- 
-
- /* /Game Sections */
+}
+/* /game sections */
 
 /* Counters Containers */
  .credit {
@@ -205,7 +280,7 @@ body {
     position: absolute;
     top: 0px;
     left: 0px;
-    margin: 2.1vh;
+    margin: 2vh;
     padding-left: 1vh;
     font-size: 2.5vw;
 }
@@ -243,11 +318,10 @@ body {
     position: absolute;
     top: 13.7vh;
     left: 0px;
-    margin: 2.1vh;
+    margin: 2vh;
     padding-left: 1vh;
     font-size: 2.5vw;
 }
-
 
 .wins-value {
     color: yellow;
@@ -360,7 +434,6 @@ body {
 }
 
 /* Cards */
-
 /* Fetched image style */
 .cards {
     height: 22vw;
@@ -377,7 +450,6 @@ body {
     transform-style: preserve-3d;
     margin: 0.1vw 2vw 0.1vw 2vw;
 }
-
 /* Used for overwrite default card styles */
 
 #first-card,
@@ -410,7 +482,7 @@ body {
 #fifth-card {
     transition-delay: 1200ms;
 }
-/* /animation Delay */
+/* /animation delay */
 
 /* Cards Faces */
 .card.is-flipped {
@@ -439,46 +511,5 @@ body {
     border-radius: 1.1vw;
 }
 /* /cards faces */
+/* /cards */
 
-/* Holding Card test */
-.hold {
-    color: #1d2124;
-    font-size: 1.7vw;
-    width: 9vw;
-    background: red;
-    border: 2px solid #0c0c0c;
-    box-shadow: 0px 0px 1vh 0.1vh black, inset 0px 0px 4vh 1.1vh black;
-    border-radius: 20px;
-    margin-top: 0.5vw;
-    font-family: 'Alfa Slab One';
-    text-align: center;
-}
-
-.hold-container {
-    margin-top: 1vh;
-}
-#hold-container {
-    justify-content: space-around;
-}
-
-.hold-active {
-    background: red;
-    color: #000000;
-    box-shadow: inset 0px 0px 1vh 0.1vh #000000, 0px 0px 1vh 0.1vh 
-    yellow;
-}
-
-/* Bet */
-
-.bet-button {
-    color: red;
-    background-color: black;
-    text-align: center;
-    width: 100%;
-    font-family: 'Orbitron', sans-serif;
-    padding-top: 0.1vh;
-}
-
-.in-game-menu-button {
-    color: yellow;
-}

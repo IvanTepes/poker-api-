@@ -25,19 +25,19 @@ $('.card').on('click', function() {
  });
 
 $('.new-game-button').click(function() {
-     $(".menu-container").toggleClass("hidden");
+     $(".main-menu-container").toggleClass("hidden");
  });
 
  $('.new-game-button').click(function() {
      $(".game-screen").removeClass("hidden").addClass('visible');
  });
 
- $('.menu-button').click(function() {
-     $('.menu-container').removeClass('hidden').addClass('visible');
+ $('.in-game-menu-button').click(function() {
+     $('.main-menu-container').removeClass('hidden').addClass('visible');
  });
 
- $('.menu-button').click(function() {
-     $('.menu-container').removeClass('visible');
+ $('.in-game-menu-button').click(function() {
+     $('.main-menu-container').removeClass('visible');
  });
 
  
