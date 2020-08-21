@@ -9,7 +9,7 @@ body {
 
 /* Game Main Menu */
 .main-menu-container {
-    background: url("../images/back.jpg") repeat center center; 
+    background: url("../images/theme-red.jpg") repeat center center; 
     box-shadow: 0px 0px 7px 5px black, inset 0px 0px 20px 20px #000000;
     z-index: 10;
     height: 100vh;
@@ -63,6 +63,7 @@ body {
     padding-top: 2vw;
     display: inline;
 }
+
 /* Main Menu Button Container */
 .button-container {
     justify-content: center;
@@ -95,7 +96,7 @@ body {
 
 /* Settings */
 .settings-menu-screen {
-    background: url(../images/back.jpg) repeat center center;
+    background: url(../images/theme-yellow.jpg) repeat center center;
     box-shadow: 0px 0px 7px 5px black, inset 0px 0px 20px 20px #000000;
     z-index: 10;
     height: 100vh;
@@ -106,8 +107,7 @@ body {
 
 .settings-heading {
     text-align: center;
-    margin: 5vh;
-    margin-top: 10vh;
+    margin-top: 5vh;
     font-size: 7vh;
     font-family: 'Goblin One', cursive;
     background-color: black;
@@ -135,9 +135,30 @@ body {
     margin: 0.5vw;
 }
 
+.theme-red {
+    background: url("../images/theme-red.jpg") repeat center center;
+    box-shadow: inset 0px 0px 7px 7px black;
+}
+
+.theme-green {
+    background: url("../images/theme-green.jpg") repeat center center;
+    box-shadow: inset 0px 0px 7px 7px black;
+}
+
+.theme-yellow {
+    background: url("../images/theme-yellow.jpg") repeat center center;
+    box-shadow: inset 0px 0px 7px 7px black;
+}
 .theme-container {
     display: flex;
     justify-content: space-around;
+}
+
+.settings-main-menu-back-button {
+    background: red;
+    height: 2vw;
+    width: 20vh;
+    border-radius: 10px;
 }
 
 .settings-menu-options {
@@ -236,7 +257,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
     background-size: cover; 
-    background: url("../images/back.jpg") repeat center center;
+    background: url("../images/theme-red.jpg") repeat center center;
     position: absolute;
     top: 0px;
     left: 0px; 

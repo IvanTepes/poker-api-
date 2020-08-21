@@ -40,7 +40,15 @@ $('.new-game-button').click(function() {
      $('.main-menu-container').removeClass('visible');
  });
 
+ $('.settings-button').click(function() {
+     $('.settings-menu-screen').removeClass('hidden');
+ });
+
+ $('.settings-main-menu-back-button').click(function() {
+     $('.settings-menu-screen').addClass('hidden');
+ });
  
+
  /* $('.new-game-button').on('click',function() {
     if($("menu-container").hasClass("menu_hide")){
         $("#showname1").removeClass("menu_hide").addClass("menu_show");
