@@ -25,7 +25,7 @@ body {
 
 .main-menu-logo {
     height: 14vw;
-    margin: 5vh;
+    margin-top: 1.5vw;
     background: url("../images/logo.png") no-repeat center center; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -42,7 +42,7 @@ body {
     background-color: black;
     flex-direction: column;
     display: grid;
-    margin: 5vh;
+    margin-top: 1vw;
     height: 40vh;
     position: relative;
     border: 2px solid gray;
