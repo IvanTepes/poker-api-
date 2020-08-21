@@ -194,9 +194,9 @@ body {
     /* height: 10vh;
     position: relative;
     margin-top: 5vh; */
-    height: 6vw;
+    /* height: 6vw; */
     position: relative;
-    margin-top: 1vw;
+    margin-top: 2vw;
 }
 
 #game-buttons-container {
@@ -273,7 +273,7 @@ body {
  }
 
 .info-container {
-    height: 30vh;
+    height: 15vw; /* last chanege from vh */
     /* margin: 1vh; */
     position: relative
 }
@@ -284,7 +284,7 @@ body {
 }
 
 .cards-container {
-    /* height: 50vh; */
+    height: 25vw;
     margin-bottom: 0.5vw;
     text-align: center;
     position: relative;
