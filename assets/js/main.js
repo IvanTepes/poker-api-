@@ -25,7 +25,7 @@ $('.card').on('click', function() {
  });
 
 $('.new-game-button').click(function() {
-     $(".main-menu-container").toggleClass("hidden");
+     $(".main-menu-screen").toggleClass("hidden");
  });
 
  $('.new-game-button').click(function() {
@@ -33,11 +33,11 @@ $('.new-game-button').click(function() {
  });
 
  $('.in-game-menu-button').click(function() {
-     $('.main-menu-container').removeClass('hidden').addClass('visible');
+     $('.main-menu-screen').removeClass('hidden').addClass('visible');
  });
 
  $('.in-game-menu-button').click(function() {
-     $('.main-menu-container').removeClass('visible');
+     $('.main-menu-screen').removeClass('visible');
  });
 
  $('.settings-button').click(function() {
@@ -48,18 +48,33 @@ $('.new-game-button').click(function() {
      $('.settings-menu-screen').addClass('hidden');
  });
  
+/* $('.setting-theme-green').click(function() {
+     $('.settings-menu-screen, .main-menu-container, .game-screen').addClass("theme-green");
+ }); */
 
- /* $('.new-game-button').on('click',function() {
-    if($("menu-container").hasClass("menu_hide")){
-        $("#showname1").removeClass("menu_hide").addClass("menu_show");
-        $("#showname2").removeClass("lockscreen_off").addClass("lockscreen_on");
-    } else {
-        $("#showname1").removeClass("menu_show").addClass("menu_hide");
-        $("#showname2").removeClass("lockscreen_on").addClass("lockscreen_off");
+ $('.setting-theme-green').on('click',function() {
+    if($(".game-screen").hasClass("game-screen") || ("theme-yellow") || ("theme-red")) {
+        $("#game").removeClass("game-screen").addClass("theme-green");
+        $("#menu-container").removeClass("theme-red").addClass("theme-green");
+        $("#settings-container").removeClass("theme-red").addClass("theme-green");
     }
 });
- */
- 
+
+$('.setting-theme-yellow').on('click',function() {
+    if($(".game-screen").hasClass("game-screen") || ("theme-green") || ("theme-red")) {
+        $("#game").removeClass("game-screen").removeClass("theme-green").removeClass("theme-red").addClass("theme-yellow");
+        $("#menu-container").removeClass("theme-red").removeClass("theme-green").removeClass("theme-red").addClass("theme-yellow");
+        $("#settings-container").removeClass("theme-red").removeClass("theme-green").removeClass("theme-red").addClass("theme-yellow");
+    } 
+});
+
+$('.setting-theme-red').on('click',function() {
+    if($(".game-screen").hasClass("game-screen") || ("theme-green") || ("theme-yellow")) {
+        $("#game").removeClass("game-screen").removeClass("theme-green").removeClass("theme-yellow").addClass("theme-red");
+        $("#menu-container").removeClass("theme-yellow").removeClass("theme-green").removeClass("theme-red").addClass("theme-red");
+        $("#settings-container").removeClass("theme-yellow").removeClass("theme-green").removeClass("theme-red").addClass("theme-red");
+    } 
+});
  /////////////////////////////////////////////////////////////////////////////////////////
 /* working script */
 
