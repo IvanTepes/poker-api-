@@ -53,14 +53,14 @@ body {
 .main-menu-items-container {
     color: #ffe92d;
     text-align: center;
-    padding-top: 2vw;
+    padding-top: 1.2vw;
     display: inline;
 }
 
 .main-menu-item-settings {
     color: #ffe92d;
     text-align: center;
-    padding-top: 2vw;
+    padding-top: 1vw;
     display: inline;
 }
 
@@ -71,12 +71,12 @@ body {
 
 .new-game-button,
 .records-button,
-.settings-button {
+.settings-button,
+.instruction-button {
     background-color: #580200;
     font-family: 'Goblin One', cursive;
     font-size: 2.6vh;
     border-radius: 1vw;
-    /* box-shadow: 0px 0px 12px 1px #f7df00, inset 0px 0px 20px 1px #000000; */
     box-shadow: inset 0px 0px 20px 1px #000000;
     border: 2px solid gray;
     height: 3vw;
@@ -86,7 +86,8 @@ body {
 
 .new-game-button:hover,
 .records-button:hover,
-.settings-button:hover {
+.settings-button:hover,
+.instruction-button:hover {
     color: black;
     text-shadow: 0px 0px 0px #000000;
     background-color: red;
@@ -94,9 +95,9 @@ body {
 }
 /* /main menu button container */
 
-/* Settings */
+/* Settings Menu*/
 .settings-menu-screen {
-    background: url(../images/theme-yellow.jpg) repeat center center;
+    background: url(../images/theme-red.jpg) repeat center center;
     box-shadow: 0px 0px 7px 5px black, inset 0px 0px 20px 20px #000000;
     z-index: 10;
     height: 100vh;
@@ -107,8 +108,8 @@ body {
 
 .settings-heading {
     text-align: center;
-    margin-top: 5vh;
-    font-size: 7vh;
+    margin-top: 2vw;
+    font-size: 4vw;
     font-family: 'Goblin One', cursive;
     background-color: black;
     color: transparent;
@@ -149,6 +150,7 @@ body {
     background: url("../images/theme-yellow.jpg") repeat center center;
     box-shadow: inset 0px 0px 7px 7px black;
 }
+
 .theme-container {
     display: flex;
     justify-content: space-around;
@@ -157,8 +159,11 @@ body {
 .settings-main-menu-back-button {
     background: red;
     height: 2vw;
-    width: 20vh;
+    width: 15vw;
     border-radius: 10px;
+    font-family: 'Goblin One', cursive;
+    font-size: 1vw;    
+    box-shadow: inset 0px 0px 2px 1px black;
 }
 
 .settings-menu-options {
@@ -185,9 +190,12 @@ body {
 
 /* Game Buttons */
 .game-buttons {
-    height: 10vh;
+    /* height: 10vh;
     position: relative;
-    margin-top: 5vh;
+    margin-top: 5vh; */
+    height: 6vw;
+    position: relative;
+    margin-top: 3vw;
 }
 
 #game-buttons-container {
@@ -265,7 +273,7 @@ body {
 
 .info-container {
     height: 30vh;
-    margin: 1vh;
+    /* margin: 1vh; */
     position: relative
 }
 
@@ -275,11 +283,11 @@ body {
 }
 
 .cards-container {
-    height: 50vh;
-    margin-bottom: 1vh;
+    /* height: 50vh; */
+    margin-bottom: 0.5vw;
     text-align: center;
     position: relative;
-    margin-top: 1vh;
+    margin-top: 0.5vw;
 }
 /* /game sections */
 
