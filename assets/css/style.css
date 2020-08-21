@@ -24,7 +24,7 @@ body {
 }
 
 .main-menu-logo {
-    height: 30vh;
+    height: 14vw;
     margin: 5vh;
     background: url("../images/logo.png") no-repeat center center; 
   -webkit-background-size: cover;
@@ -35,7 +35,7 @@ body {
  
 #main-menu,
 #settings-menu-container {
-    width: 30vw;
+    width: 35vw;
 }
 
 .main-menu {
@@ -46,6 +46,7 @@ body {
     height: 40vh;
     position: relative;
     border: 2px solid gray;
+    padding-left: 7.5vw;
     border-radius: 4vw;
     box-shadow: 0px 0px 5vh 2vh black, inset 0px 0px 1vh 0.2vh #ffffff;
 }
