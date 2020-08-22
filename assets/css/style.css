@@ -23,6 +23,11 @@ body {
     width: 100vw;
 }
 
+#main-menu,
+#settings-menu-container {
+    width: 35vw;
+}
+
 .main-menu-logo {
     height: 14vw;
     margin-top: 1.5vw;
@@ -31,11 +36,6 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
     background-size: contain; 
-}
- 
-#main-menu,
-#settings-menu-container {
-    width: 35vw;
 }
 
 .main-menu {
@@ -130,6 +130,7 @@ body {
     padding: 2vh;
 }
 
+/* Settings Background Themes Options */
 .theme {
     height: 10vh;
     width: 10vh;
@@ -139,23 +140,26 @@ body {
 
 .setting-theme-red {
     background: url("../images/theme-red.jpg") repeat center center;
-    box-shadow: inset 0px 0px 7px 7px black;
+    box-shadow: inset 0px 0px 3px 3px black;
 }
 
 .setting-theme-green {
     background: url("../images/theme-green.jpg") repeat center center;
-    box-shadow: inset 0px 0px 7px 7px black;
+    box-shadow: inset 0px 0px 3px 3px black;
 }
 
 .setting-theme-yellow {
     background: url("../images/theme-yellow.jpg") repeat center center;
-    box-shadow: inset 0px 0px 7px 7px black;
+    box-shadow: inset 0px 0px 3px 3px black;
 }
 
 .setting-theme-red:hover,
 .setting-theme-yellow:hover,
-.setting-theme-green:hover {
-    box-shadow: 0px 0px 7px 7px yellow, inset 0px 0px 7px 7px black;;
+.setting-theme-green:hover,
+.settings-card-back-red:hover,
+.settings-card-back-black:hover,
+.settings-card-back-blue:hover {
+    box-shadow: 0px 0px 3px 3px yellow, inset 0px 0px 3px 3px black;;
 } 
 
 .theme-container {
@@ -217,10 +221,30 @@ body {
     margin: 0.5vw;
     font-family: 'Goblin One', cursive;
 }
-/* /settings */
-/* /game menu */
+/* /settings background themes options */
 
-/* Button Click */
+/* Settings Cards Background Options*/
+.settings-card-back-red {
+    background: url("../images/back-of-card-red.png") no-repeat;
+    background-size: cover;
+    box-shadow: inset 0px 0px 3px 3px black;
+}
+
+.settings-card-back-black {
+    background: url("../images/back-of-card-black.png") no-repeat;
+    background-size: cover; 
+    box-shadow: inset 0px 0px 3px 3px black;
+}
+
+.settings-card-back-blue {
+    background: url("../images/back-of-card-blue.png") no-repeat;
+    background-size: cover; 
+    box-shadow: inset 0px 0px 3px 3px black;
+}
+/* /settings cards background options*/
+/* /settings menu */
+
+/* Elements Visability */
 .hidden {
   visibility: hidden;
   opacity: 0;
@@ -232,16 +256,12 @@ body {
   opacity: 1;
   transition: opacity 2s linear;
 }
-/* /button click */
+/* /elements visability */
 
 /* Game Buttons */
 .game-buttons {
-    /* height: 10vh;
     position: relative;
-    margin-top: 5vh; */
-    /* height: 6vw; */
-    position: relative;
-    margin-top: 2vw;
+    margin-top: 1vw;
 }
 
 #game-buttons-container {
@@ -300,7 +320,6 @@ body {
     box-shadow: inset 0px 0px 1vh 0.1vh #000000, 0px 0px 1vh 0.1vh 
     yellow;
 }
-
 /* /hold-card-button */
 /* /game-buttons */
 
@@ -314,8 +333,7 @@ body {
  }
 
 .info-container {
-    height: 15vw; /* last chanege from vh */
-    /* margin: 1vh; */
+    height: 15vw;
     position: relative
 }
 
@@ -326,10 +344,10 @@ body {
 
 .cards-container {
     height: 25vw;
-    margin-bottom: 0.5vw;
+    margin-bottom: 1vw;
     text-align: center;
     position: relative;
-    margin-top: 0.5vw;
+    margin-top: 1vw;
 }
 /* /game sections */
 
@@ -424,8 +442,7 @@ body {
 .combinations {
     height: 13vw;
     width: 100%;
-    border-radius: 20px;
-    
+    border-radius: 20px; 
 }
 
 .hand {
@@ -527,8 +544,8 @@ body {
     transform-style: preserve-3d;
     margin: 0.1vw 2vw 0.1vw 2vw;
 }
-/* Used for overwrite default card styles */
 
+/* Used for overwrite default card styles */
 #first-card,
 #second-card,
 #third-card,
@@ -572,7 +589,6 @@ body {
 }
 
 .card-face--front {
-   background: url("../images/back-of-card.png") no-repeat center center;
     background-size: cover;
     height: 22vw;
     width: 14vw;
@@ -587,6 +603,20 @@ body {
     box-shadow: 0px 0px 1vh 0.2vh black;
     border-radius: 1.1vw;
 }
+
+/* Cards Themes */
+.card-theme-black {
+    background: url("../images/back-of-card-black.png") no-repeat center center;
+}
+
+.card-theme-red {
+    background: url("../images/back-of-card-red.png") no-repeat center center;
+}
+
+.card-theme-blue {
+    background: url("../images/back-of-card-blue.png") no-repeat center center; 
+}
+/* /cards themes */
 /* /cards faces */
 /* /cards */
 
