@@ -607,14 +607,17 @@ body {
 /* Cards Themes */
 .card-theme-black {
     background: url("../images/back-of-card-black.png") no-repeat center center;
+    background-size: cover;
 }
 
 .card-theme-red {
     background: url("../images/back-of-card-red.png") no-repeat center center;
+    background-size: cover;
 }
 
 .card-theme-blue {
     background: url("../images/back-of-card-blue.png") no-repeat center center; 
+    background-size: cover;
 }
 /* /cards themes */
 /* /cards faces */
