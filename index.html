@@ -100,50 +100,112 @@
 <!-- /settings menu -->
 
 <!-- Game Screen -->
+<!-- <div class="container-fluid game-screen theme-red" id="game">
+	<div class="container-fluid info-container">
+		<div class="row">
+			<div class="col info-items">
+				<div class="credit">
+					<div class="credit-remaining-text">CREDIT:</div>
+					<div class="credit-remaining-value">500</div>
+				</div>
+				<div class="wins-container">
+					<div class="wins-text">WIN:</div>
+					<div class="wins-value">15000</div>
+				</div>
+			</div>
+			<div class="col info-items">
+				<div class="logo"></div>
+			</div>
+			<div class="col info-items">
+				<div class="combinations">
+					<div class="container">
+						<div class="row m-0 hand-holder">
+							<div id="royal-flush" class="col hand royal-flush">ROYAL FLUSH : 250 x Bet</div>
+						</div>
+						<div class="row m-0 hand-holder">
+							<div id="straight-flush" class="col hand straight-flush">STRAIGHT FLUSH : 50 x Bet</div>
+							<div id="straight" class="col hand straight">STRAIGHT : 4 x Bet</div>
+						</div>
+						<div class="row m-0 hand-holder">
+							<div id="four-of-kind" class="col hand four-of-kind">FOUR OF KIND : 25 x Bet</div>
+							<div id="three-of-kind" class="col hand three-of-kind">THREE OF KIND : 3 x Bet</div>
+						</div>
+						<div class="row m-0 hand-holder">
+							<div id="full-house" class="col hand full-house">FULL HOUSE : 9 x Bet</div>
+							<div id="two-pair" class="col hand two-pair">TWO PAIR : 2 x Bet</div>
+						</div>
+						<div class="row m-0 hand-holder">
+							<div id="flush" class="col hand flush">FLUSH : 6 x Bet</div>
+							<div id="one-pair" class="col hand one-pair">ONE PAIR : 1 x Bet</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+</div> -->
+
 <div class="container-fluid game-screen theme-red" id="game">
-            <!-- <div class="loading"></div> -->
-            <div class="container-fluid info-container">
-                <div class="row">
-                    <div class="col info-items">
-                        <div class="credit">
-                            <div class="credit-remaining-text">CREDIT:</div>
-                            <div class="credit-remaining-value">500</div>
-                        </div>
-                        <div class="wins-container">
-                            <div class="wins-text">WIN:</div>
-                            <div class="wins-value">15000</div>
-                        </div>
-                    </div>
-                    <div class="col info-items">
-                        <div class="logo"></div>
-                    </div>
-                    <div class="col info-items">
-                        <div class="combinations">
-                            <div class="container">
-                                <div class="row m-0 hand-holder">
-                                    <div id="royal-flush" class="col hand royal-flush">ROYAL FLUSH : 250 x Bet</div>
-                                </div>
-                                <div class="row m-0 hand-holder">
-                                    <div id="straight-flush" class="col hand straight-flush">STRAIGHT FLUSH : 50 x Bet</div>
-                                    <div id="straight" class="col hand straight">STRAIGHT : 4 x Bet</div>
-                                </div>
-                                <div class="row m-0 hand-holder">
-                                    <div id="four-of-kind" class="col hand four-of-kind">FOUR OF KIND : 25 x Bet</div>
-                                    <div id="three-of-kind" class="col hand three-of-kind">THREE OF KIND : 3 x Bet</div>
-                                </div>
-                                <div class="row m-0 hand-holder">
-                                    <div id="full-house" class="col hand full-house">FULL HOUSE : 9 x Bet</div>
-                                    <div id="two-pair" class="col hand two-pair">TWO PAIR : 2 x Bet</div>
-                                </div>
-                                <div class="row m-0 hand-holder">
-                                    <div id="flush" class="col hand flush">FLUSH : 6 x Bet</div>
-                                    <div id="one-pair" class="col hand one-pair">ONE PAIR : 1 x Bet</div>
-                                </div>
+	<div class="row info-container">
+		<div class="col-4">
+			<div class="credit container-fluid">
+                    <div class="col-4 pl-0 credit-remaining-text">CREDIT:</div>
+                    <div class="col credit-remaining-value text-center">500</div>
+			</div>
+			<div class="wins-container container-fluid">
+				<div class="col-4 pl-0 wins-text">WIN:</div>
+				<div class="col wins-value text-center">15000</div>
+			</div>
+		</div>
+		<div class="col-4">
+			<div class="logo"></div>
+		</div>
+		<div class="col-4">
+					<div class="container">
+						<div class="row hand-holder">
+							<div id="royal-flush" class="col hand royal-flush">
+                                <div class="div">ROYAL FLUSH X 250 BET</div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+						</div>
+						<div class="row hand-holder">
+							<div id="straight-flush" class="col hand straight-flush">
+                                <div class="div">STRAIGHT FLUSH : 50 x Bet</div>
+                            </div>
+							<div id="straight" class="col hand straight">
+                                <div class="div">STRAIGHT : 4 x Bet</div>
+                            </div>
+						</div>
+						<div class="row hand-holder">
+							<div id="four-of-kind" class="col hand four-of-kind">
+                                <div class="div">FOUR OF KIND : 25 x Bet</div>
+                            </div>
+							<div id="three-of-kind" class="col hand three-of-kind">
+                                <div class="div">THREE OF KIND : 3 x Bet</div>
+                            </div>
+						</div>
+						<div class="row hand-holder">
+							<div id="full-house" class="col hand full-house">
+                                <div class="div">FULL HOUSE : 9 x Bet</div>
+                            </div>
+							<div id="two-pair" class="col hand two-pair">
+                                <div class="div">TWO PAIR : 2 x Bet</div>
+                            </div>
+						</div>
+						<div class="row hand-holder">
+							<div id="flush" class="col hand flush">
+                                <div class="div">FLUSH : 6 x Bet</div>
+                            </div>
+							<div id="one-pair" class="col hand one-pair">
+                                <div class="div">ONE PAIR : 1 x Bet</div>
+                            </div>
+						</div>
+				</div>
+		</div>
+	</div>
+	<div class="row"></div>
+	<div class="row"></div>
+	<div class="row"></div>
+</div>
+
 
 
             <!-- Cards src note
@@ -153,7 +215,7 @@
             -->
             <!-- Cards Container -->
             <!-- Code inspiration from https://3dtransforms.desandro.com/  -->           
-			<div class="container-fluid cards-container ">
+			<!-- <div class="container-fluid cards-container ">
 				<div class="scene row">
 					<div class="card col" id="first-card">
 						<div class="card-face card-face--front card-theme-black"></div>
@@ -202,11 +264,11 @@
                     </div>
                 </div>
                 
-			</div>
+			</div> -->
             <!-- /Cards Container -->
 
             <!-- Play Buttons -->
-			<div class="container-fluid game-buttons">
+			<!-- <div class="container-fluid game-buttons">
 				<div class="container" id="game-buttons-container">
 					<div class="row">
                         <div role="button" class="col play-buttons in-game-menu-button">MENU</div>
@@ -222,10 +284,10 @@
 					</div>
 				</div>
 			</div>
-        
-            <!-- /Play Buttons -->
-            <!-- /game-screen -->
-</div>
+         -->
+            <!-- /play buttons -->
+            <!-- /game screen -->
+<!-- </div> -->
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
