@@ -28,33 +28,37 @@
 
 <body>
 
-<!-- Menu -->
-<div class="container-fluid main-menu-screen theme-red" id="menu-container">
-	<div class="main-menu-logo"></div>
-	<div class="row mx-auto container main-menu" id="main-menu">
-		<div class="col main-menu-items-container new-game">
-			<div class="row button-container">
-				<div role="button" id="new-game" class="col-8 new-game-button">New Game</div>
+<!-- Main Menu -->
+ <div class="container-fluid main-menu-screen theme-red" id="menu-container">
+    <div class="row">
+        <div class="col main-menu-logo"></div>
+    </div>
+    <div class="row mx-auto main-menu" id="main-menu">
+        <div class="col container main-menu-items-container new-game">
+            <div class="button-container">
+				<div role="button" id="new-game" class="col-8 mx-auto new-game-button">New Game</div>
 			</div>
-		</div>
-		<div class="col main-menu-items-container records">
-			<div class="row button-container">
-				<div role="button" id="records" class="col-8 records-button">Records</div>
-			</div>
-		</div>
+        </div>
         <div class="col main-menu-items-container records">
-			<div class="row button-container">
-				<div role="button" id="instructions" class="col-8 records-button">Instructions</div>
+            <div class="button-container">
+				<div role="button" id="records" class="col-8 mx-auto records-button">Records</div>
 			</div>
-		</div>
-		<div class="col main-menu-items-container main-menu-item-settings">
-			<div class="row button-container">
-				<div role="button" id="settings" class="col-8 settings-button">Settings</div>
+        </div>
+        <div class="col main-menu-items-container records">
+            <div class="button-container">
+				<div role="button" id="instructions" class="col-8 mx-auto records-button">Instructions</div>
 			</div>
-		</div>
-	</div>
-</div>
+        </div>
+        <div class="col main-menu-items-container main-menu-item-settings">
+            <div class="button-container">
+				<div role="button" id="settings" class="col-8 mx-auto settings-button">Settings</div>
+			</div>
+        </div>
+    </div>
+ </div>
+<!-- /main menu -->
 
+<!-- Settings Menu -->
 <div class="container-fluid settings-menu-screen hidden theme-red" id="settings-container">
     <div class="container">
         <div class="row">
@@ -63,29 +67,37 @@
             </div>
         </div>
     </div>
-    <div class="row mx-auto" id="settings-menu-container" >
-        <div class="col settings-menu">
-            <h2 class="settings-menu-options">Sound</h2>
-            <button class="m-1">On/Off</button>
-            <h2 class="settings-menu-options">Background</h2>
-            <div class="container theme-container">
-                <div role="button" class="theme setting-theme-red"></div>
-                <div role="button" class="theme setting-theme-green"></div>
-                <div role="button" class="theme setting-theme-yellow"></div>
+    <div class="container">
+        <div class="row mx-auto" id="settings-menu-container">
+            <div class="col settings-menu">
+                <h2 class="settings-menu-options">Sound</h2>
+                <button class="m-1">On/Off</button>
+                <h2 class="settings-menu-options">Background</h2>
+                <div class="container">
+                    <div class="row theme-container">
+                        <div role="button" class="col theme setting-theme-red"></div>
+                        <div role="button" class="col theme setting-theme-green"></div>
+                        <div role="button" class="col theme setting-theme-yellow"></div>
+                    </div>
+                </div>
+                <h2 class="settings-menu-options">Card Style</h2>
+                <div class="container">
+                    <div class="row theme-container">
+                        <div role="button" class="col theme settings-card-back-red"></div>
+                        <div role="button" class="col theme settings-card-back-black"></div>
+                        <div role="button" class="col theme settings-card-back-blue"></div>
+                    </div>
+                </div>
+                <div class="container pt-2">
+                    <div class="row">
+                        <button role="button" class="col-8 mx-auto settings-main-menu-back-button">Main Menu</button>
+                    </div>
+                </div>
             </div>
-            <h2 class="settings-menu-options">Card Style</h2>
-            <div class="container theme-container">
-                <div role="button" class="theme settings-card-back-red"></div>
-                <div role="button" class="theme settings-card-back-black"></div>
-                <div role="button" class="theme settings-card-back-blue"></div>
-            </div>
-            <div class="container">
-            <button role="button" class="m-1 settings-main-menu-back-button">Main Menu</button>
-        </div>
         </div>
     </div>
 </div>
-<!-- /menu -->
+<!-- /settings menu -->
 
 <!-- Game Screen -->
 <div class="container-fluid game-screen theme-red" id="game">
