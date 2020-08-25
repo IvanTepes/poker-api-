@@ -262,7 +262,7 @@
 
 /* Game Screen */
 .game-screen {
-    height: 100vh;
+    height: 100%;
     background: url("../images/theme-red.jpg") repeat center center;
     position: absolute;
     top: 0px;
