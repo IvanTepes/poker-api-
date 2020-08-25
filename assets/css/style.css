@@ -396,7 +396,7 @@
 
 /* Cards Container*/
 .cards-container {
-    height: 25vw;
+    height: 23vw;
     justify-content: space-around;
 }
 
@@ -485,7 +485,6 @@
 }
 
 .play-buttons {
-    margin-top: 2vw;
     padding-top: 0.6vh;
     font-size: 1.7vw;
     border-radius: 10px;
