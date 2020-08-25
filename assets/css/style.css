@@ -1,13 +1,6 @@
 
-/* body {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-} */
 
-/* Game Main Menu */
+/* Main Menu */
 .main-menu-screen {
     background: url("../images/theme-red.jpg") repeat center center; 
     box-shadow: 0px 0px 7px 5px black, inset 0px 0px 20px 20px #000000;
@@ -89,6 +82,7 @@
     box-shadow: 0px 0px 12px 1px #ff0909, inset 0px 0px 20px 6px #000000;
 }
 /* /main menu button container */
+/* /main menu */
 
 /* Settings Menu*/
 .settings-menu-screen {
@@ -124,7 +118,7 @@
     padding: 2vh;
 }
 
-/* Settings Background Themes Options */
+/* Settings Background Themes */
 .theme {
     height: 7vw;
     border: 1px solid yellow;
@@ -232,6 +226,23 @@
     background-size: cover; 
     box-shadow: inset 0px 0px 3px 3px black;
 }
+
+/* Cards Themes */
+.card-theme-black {
+    background: url("../images/back-of-card-black.png") no-repeat center center;
+    background-size: contain;
+}
+
+.card-theme-red {
+    background: url("../images/back-of-card-red.png") no-repeat center center;
+    background-size: contain;
+}
+
+.card-theme-blue {
+    background: url("../images/back-of-card-blue.png") no-repeat center center; 
+    background-size: contain;
+}
+/* /cards themes */
 /* /settings cards background options*/
 /* /settings menu */
 
@@ -249,108 +260,35 @@
 }
 /* /elements visability */
 
-/* Game Buttons */
-.game-buttons {
-    position: relative;
-    margin-top: 1vw;
-}
-
-#game-buttons-container {
-    position: relative;
-    display: contents;
-    text-align: center;
-    margin-right: 6vw;
-    flex-flow: column;
-}
-
-.play-buttons {
-    margin: 1vw;
-    padding-top: 0.6vh;
-    font-size: 1.7vw;
-    border-radius: 10px;
-    background-color: black;
-    color: red;
-    font-family: 'Goblin One', cursive;
-    border: 2px solid #bfbfbf;
-    box-shadow: 0px 0px 1vh 0.2vh black, inset 0px 0px 1vh 0.2vh #ffffff
-}
-
-.bet-button {
-    color: red;
-    background-color: black;
-    text-align: center;
-    width: 100%;
-    font-family: 'Orbitron', sans-serif;
-    padding-top: 0.1vh;
-}
-
-.in-game-menu-button {
-    color: yellow;
-}
-
-/* Hold Card Button */
-.hold {
-    color: #1d2124;
-    font-size: 1.7vw;
-    width: 9vw;
-    background: red;
-    border: 2px solid #0c0c0c;
-    box-shadow: 0px 0px 1vh 0.1vh black, inset 0px 0px 4vh 1.1vh black;
-    border-radius: 20px;
-    font-family: 'Alfa Slab One';
-    text-align: center;
-}
-
-#hold-container {
-    justify-content: space-around;
-}
-
-.hold-active {
-    background: red;
-    color: #000000;
-    box-shadow: inset 0px 0px 1vh 0.1vh #000000, 0px 0px 1vh 0.1vh 
-    yellow;
-}
-/* /hold-card-button */
-/* /game-buttons */
-
-/* Game Sections */
+/* Game Screen */
 .game-screen {
     height: 100vh;
     background: url("../images/theme-red.jpg") repeat center center;
     position: absolute;
     top: 0px;
     left: 0px; 
- }
+}
+/* /game screen */
 
+/* Information Container */
 .info-container {
     height: 15vw;
     position: relative;
     padding-top: 1vw;
 }
 
-.cards-container {
-    height: 25vw;
-    margin-bottom: 1vw;
-    text-align: center;
-    position: relative;
-    margin-top: 1vw;
-}
-/* /game sections */
-
 /* Counters Containers */
  .credit {
     font-family: 'Orbitron', sans-serif;
     font-weight: 600;
-    display: flex;
-    padding: 1.2vw;
     font-size: 2vw;
+    padding: 1.2vw;
     border: 2px solid white;
     border-radius: 10px;
-    margin-bottom: 2.5vh;
-    background-color: black;
+    margin-bottom: 2vw;
     color: red;
-    box-shadow: 0px 0px 1vh 0.2vh black, inset 0px 0px 1vh 0.2vh #ffffff;
+    background-color: black;
+    box-shadow: 0px 0px 1vw 0.2vw black, inset 0px 0px 0.5vw 0.1vw #ffffff;
 }
 
 .credit-remaining-text {
@@ -359,20 +297,18 @@
 
 .credit-remaining-value {
     color: yellow;
+}
 
- }
-
- .wins-container {
+.wins-container {
     font-family: 'Orbitron', sans-serif;
     font-weight: 600;
-    display: flex;
     padding: 1.2vw;
-    border: 2px solid white;
-    background-color: black;
     color: red;
+    background-color: black;
+    border: 2px solid white;
     border-radius: 10px;
-    box-shadow: 0px 0px 1vh 0.2vh black, inset 0px 0px 1vh 0.2vh #ffffff;;
- }
+    box-shadow: 0px 0px 1vw 0.2vw black, inset 0px 0px 0.5vw 0.1vw #ffffff;
+}
 
 .wins-text {
     color: red;
@@ -395,9 +331,10 @@
     background-size: contain; 
 }
 
+/* Wininng Combinations Display */
 .hand {
     color: #ffc107;
-    height: 4.5vh;
+    height: 2.4vw;
     background-color: black;
     text-align: center;
     margin: 0.3vh;
@@ -412,9 +349,6 @@
     font-weight: 500;
 }
 
-/* /wininng Combinations Display */
-
-
 /* .royal-flush { 
       background-color: #d60000;
     box-shadow: inset 0px 0px 4px 4px #000000;
@@ -422,7 +356,6 @@
 }
     */ 
  
-
 .straight-flush {
     background-color: #000000;
     box-shadow: 0px 0px 5px 2px #ffcf00;
@@ -431,64 +364,47 @@
 
 /*
 .four-of-kind {
-     background: url(/assets/images/hands/four-of-kind.png) no-repeat center center;
-     background-size: contain;
+     
 }
 
 .full-house {
-     background: url(/assets/images/hands/full-house.png) no-repeat center center;
-     background-size: contain;
+     
 }
 
 .flush {
-     background: url(/assets/images/hands/flush.png) no-repeat center center;
-     background-size: contain;
+     
 }
 
 .straight {
-     background: url(/assets/images/hands/straight.png) no-repeat center center;
-     background-size: contain;
+    
 }
 
 .three-of-kind {
-     background: url(/assets/images/hands/three-of-kind.png) no-repeat center center;
-     background-size: contain;
+     
 }
 
 .two-pair {
-     background: url(/assets/images/hands/two-pair.png) no-repeat center center;
-     background-size: contain;
+     
 }
 
 .one-pair {
-     background: url(/assets/images/hands/one-pair.png) no-repeat center center;
-     background-size: contain;
+     
 }
  */
+ /* /wininng combinations display */
+/* /information container */
 
-.scene {
-    width: 100%;
-    height: 23vw;
-    perspective: 600px;
-    display: flex;
+/* Cards Container*/
+.cards-container {
+    height: 25vw;
+    justify-content: space-around;
 }
-
-/* Cards */
-/* Fetched image style */
-.cards {
-    height: 22vw;
-    width: 14.1vw;
-    display: inline-block;
-}
-/* /fetched image style */
 
 .card {
     text-align: justify;
-    width: 15vw;
     height: 100%;
     transition: transform 1s;
     transform-style: preserve-3d;
-    margin: 0.1vw 2vw 0.1vw 2vw;
 }
 
 /* Used for overwrite default card styles */
@@ -499,8 +415,17 @@
 #fifth-card {
     background-color: #fff0;
     border: none;
+    align-items: center;
 }
 /* /used for overwrite default card styles */
+
+/* Fetched image style */
+.cards {
+    height: 23vw;
+    width: 14.3vw;
+    display: inline-block;
+}
+/* /fetched image style */
 
 /* Animation Delay */
 #first-card {
@@ -530,42 +455,99 @@
 }
 
 .card-face {
-    position: relative;
     backface-visibility: hidden;
 }
 
 .card-face--front {
     background-size: cover;
-    height: 22vw;
-    width: 14vw;
+    height: 23vw;
+    width: 14.3vw;
     display: inline-block;
-    box-shadow: 0px 0px 1vh 0.5vh black;
+    box-shadow: 0px 0px 1vw 0.5vw black;;
     border-radius: 1.1vw;
     position: absolute;
 }
 
 .card-face--back {
   transform: rotateY(180deg);
-    box-shadow: 0px 0px 1vh 0.2vh black;
+    box-shadow: 0px 0px 1vw 0.5vw black;;
     border-radius: 1.1vw;
+    width: 14.3vw;
+    height: 23vw;
 }
 
-/* Cards Themes */
-.card-theme-black {
-    background: url("../images/back-of-card-black.png") no-repeat center center;
-    background-size: contain;
-}
-
-.card-theme-red {
-    background: url("../images/back-of-card-red.png") no-repeat center center;
-    background-size: contain;
-}
-
-.card-theme-blue {
-    background: url("../images/back-of-card-blue.png") no-repeat center center; 
-    background-size: contain;
-}
-/* /cards themes */
 /* /cards faces */
 /* /cards */
 
+/* Game Buttons */
+.game-buttons {
+    justify-content: space-around
+}
+
+.play-buttons {
+    margin-top: 2vw;
+    padding-top: 0.6vh;
+    font-size: 1.7vw;
+    border-radius: 10px;
+    background-color: black;
+    color: red;
+    font-family: 'Goblin One', cursive;
+    border: 2px solid #bfbfbf;
+    box-shadow: 0px 0px 1vw 0.4vw black, inset 0px 0px 0.4vw 0.1vw #ffffff;
+}
+
+.play-buttons:hover {
+    background-color: red;
+    color: black;
+    box-shadow: 0px 0px 0.5vw 0.1vw yellow, inset 0px 0px 0.5vw 0.1vw #000000;
+    border: 2px solid black;
+
+}
+
+.in-game-menu-button {
+    color: yellow;
+}
+
+#bet-down,
+#bet-up {
+    font-size: 1vw;
+    padding-top: 0.8vw;
+    color: black;
+    background-color: yellow;
+    box-shadow: 0px 0px 1vw 0.1vw #000000, inset 0px 0px 1vw 0.1vw #000000;
+}
+
+#bet-up:hover {
+    background-color: green;
+}
+
+#bet-down:hover {
+    background-color: red;
+}
+
+/* Hold Card Button */
+.hold {
+    color: #1d2124;
+    font-size: 1.7vw;
+    width: 9vw;
+    background: red;
+    border: 2px solid #0c0c0c;
+    box-shadow: 0px 0px 1vh 0.1vh #000000, inset 0px 0px 4vh 1.1vh #000000;
+    border-radius: 20px;
+    font-family: 'Goblin One', cursive;
+    text-align: center;
+}
+
+.hold-container {
+    justify-content: space-around;
+}
+
+.hold-active,
+.hold:hover {
+    background: red;
+    color: #000000;
+    box-shadow: inset 0px 0px 1vh 0.1vh #000000, 0px 0px 1vh 0.1vh 
+    yellow;
+}
+/* /hold-card-button */
+/* /game-buttons */
