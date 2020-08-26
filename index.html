@@ -91,134 +91,144 @@
 
 <!-- Cards src note Src is set up like this to remove border when src is empty-->
 <!-- Game Screen -->
-<div class="container-fluid p-0 game-screen theme-red" id="game">
-	<div class="row container-fluid m-0 p-0 pt-2 info-container">
-		<div class="col-4 pr-0">
-			<div class="container-fluid credit ">
-                <div class="row">
-                    <div class="col-4 credit-remaining-text">CREDIT:</div>
-                    <div class="col-8 container-fluid credit-remaining-value text-center">
-                        <!-- try fix when score is too big -->
-                        <div class="container-fluid p-0">5,000,002</div>
+<div class="container-fluid theme-red" id="game">
+    <div class="row game-screen">
+        <div class="col-12 container-fluid pt-2">
+            <div class="row p-0 pt-1 info-container">
+                <div class="col-4 pr-0">
+                    <div class="container-fluid credit ">
+                        <div class="row">
+                            <div class="col-4 credit-remaining-text">CREDIT:</div>
+                            <div class="col-8 container-fluid credit-remaining-value text-center">
+                                <!-- try fix when score is too big -->
+                                <div class="container-fluid p-0">5,000,001</div>
+                            </div>
+                        </div>
                     </div>
+                    <div class="container-fluid wins-container">
+                        <div class="row">
+                            <div class="col-4 wins-text">WIN:</div>
+                            <div class="col-8 container-fluid wins-value text-center">
+                                <div class="container-fluid p-0">5,000,000</div>
+                            </div>
+                        </div>
+                    </div> 
                 </div>
-			</div>
-			<div class="container-fluid wins-container">
-                <div class="row">
-				    <div class="col-4 wins-text">WIN:</div>
-				    <div class="col-8 container-fluid wins-value text-center">
-                        <div class="container-fluid p-0">5,000,000</div>
-                    </div>
+                <div class="col-4">
+                    <div class="logo"></div>
                 </div>
-			</div> 
-		</div>
-		<div class="col-4">
-			<div class="logo"></div>
-		</div>
-		<div class="col-4 pl-0">
-            <div class="container">
-                <div class="row hand-holder">
-                    <div id="royal-flush" class="col mt-0 hand royal-flush">
-                        <div class="div">ROYAL FLUSH X 250 BET</div>
+                <div class="col-4 pl-0">
+                    <div class="container">
+                        <div class="row hand-holder">
+                            <div id="royal-flush" class="col mt-0 hand royal-flush">
+                                <div class="div">ROYAL FLUSH X 250 BET</div>
+                            </div>
+                        </div>
+                        <div class="row hand-holder">
+                            <div id="straight-flush" class="col hand straight-flush">
+                                <div class="div">STRAIGHT FLUSH : 50 x Bet</div>
+                            </div>
+                            <div id="straight" class="col hand straight">
+                                <div class="div">STRAIGHT : 4 x Bet</div>
+                            </div>
+                        </div>
+                        <div class="row hand-holder">
+                            <div id="four-of-kind" class="col hand four-of-kind">
+                                <div class="div">FOUR OF KIND : 25 x Bet</div>
+                            </div>
+                            <div id="three-of-kind" class="col hand three-of-kind">
+                                <div class="div">THREE OF KIND : 3 x Bet</div>
+                            </div>
+                        </div>
+                        <div class="row hand-holder">
+                            <div id="full-house" class="col hand full-house">
+                                <div class="div">FULL HOUSE : 9 x Bet</div>
+                            </div>
+                            <div id="two-pair" class="col hand two-pair">
+                                <div class="div">TWO PAIR : 2 x Bet</div>
+                            </div>
+                        </div>
+                        <div class="row hand-holder">
+                            <div id="flush" class="col hand flush">
+                                <div class="div">FLUSH : 6 x Bet</div>
+                            </div>
+                            <div id="one-pair" class="col hand one-pair">
+                                <div class="div">ONE PAIR : 1 x Bet</div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="row hand-holder">
-                    <div id="straight-flush" class="col hand straight-flush">
-                        <div class="div">STRAIGHT FLUSH : 50 x Bet</div>
-                    </div>
-                    <div id="straight" class="col hand straight">
-                        <div class="div">STRAIGHT : 4 x Bet</div>
-                    </div>
-                </div>
-                <div class="row hand-holder">
-                    <div id="four-of-kind" class="col hand four-of-kind">
-                        <div class="div">FOUR OF KIND : 25 x Bet</div>
-                    </div>
-                    <div id="three-of-kind" class="col hand three-of-kind">
-                        <div class="div">THREE OF KIND : 3 x Bet</div>
-                    </div>
-                </div>
-                <div class="row hand-holder">
-                    <div id="full-house" class="col hand full-house">
-                        <div class="div">FULL HOUSE : 9 x Bet</div>
-                    </div>
-                    <div id="two-pair" class="col hand two-pair">
-                        <div class="div">TWO PAIR : 2 x Bet</div>
-                    </div>
-                </div>
-                <div class="row hand-holder">
-                    <div id="flush" class="col hand flush">
-                        <div class="div">FLUSH : 6 x Bet</div>
-                    </div>
-                    <div id="one-pair" class="col hand one-pair">
-                        <div class="div">ONE PAIR : 1 x Bet</div>
-                    </div>
-                </div>
-			</div>
-		</div>
-	</div>
-	<div class="row container-fluid m-0 mt-2 cards-container">
-        <div class="col-2 card" id="first-card">
-            <div class="card-face card-face--front card-theme-black"></div>
-            <div class="card-face card-face--back">
-                <img class="cards" id="card1"
-                        src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 "> 
-            </div>
-        </div>
-        <div class="col-2 card" id="second-card">
-            <div class="card-face card-face--front card-theme-black"></div>
-            <div class="card-face card-face--back">
-                <img class="cards" id="card2" 
-                    src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 ">
-            </div>
-        </div>
-        <div class="col-2 card" id="third-card">
-            <div class="card-face card-face--front card-theme-black"></div>
-            <div class="card-face card-face--back">
-                <img class="cards" id="card3" 
-                    src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 ">
-            </div>
-        </div>
-        <div class="col-2 card" id="fourth-card">
-            <div class="card-face card-face--front card-theme-black"></div>
-            <div class="card-face card-face--back">
-                <img class="cards" id="card4"
-                    src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 ">
-            </div>
-        </div>
-        <div class="col-2 card" id="fifth-card">
-            <div class="card-face card-face--front card-theme-black"></div>
-            <div class="card-face card-face--back">
-                <img class="cards" id="card5"
-                    src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 ">
-            </div>
-        </div>
-    </div>
-	<div class="row container-fluid m-0 mt-3 hold-container">
-        <div role="button" class="col-1 p-0 hold">HOLD</div>
-        <div role="button" class="col-1 p-0 hold">HOLD</div>
-        <div role="button" class="col-1 p-0 hold">HOLD</div>
-        <div role="button" class="col-1 p-0 hold">HOLD</div>
-        <div role="button" class="col-1 p-0 hold">HOLD</div>
-    </div>
-	<div class="row container-fluid m-0 mt-3 text-center game-buttons">
-        <div class="col-2">
-            <div role="button" class="play-buttons in-game-menu-button">MENU</div>
-        </div>
-        <div class="col-4">
-            <div class="container-fluid">
-                <div class="row m-0 justify-content-between">
-                    <div role="button" class="col-3 pl-0 pr-0 play-buttons" id="bet-down">DOWN</div>
-                    <div class="col-5 play-buttons" id="bet-counter">100</div>
-                    <div role="button" class="col-3 pl-0 pr-0 play-buttons" id="bet-up">UP</div>
                 </div>
             </div>
         </div>
-        <div class="col-2">
-            <div role="button" class="play-buttons double">DOUBLE</div>
+        <div class="col-12 container-fluid mt-2">
+            <div class="row cards-container">
+                <div class="col-2 card" id="first-card">
+                    <div class="card-face card-face--front card-theme-black"></div>
+                    <div class="card-face card-face--back">
+                        <img class="cards" id="card1"
+                                src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 "> 
+                    </div>
+                </div>
+                <div class="col-2 card" id="second-card">
+                    <div class="card-face card-face--front card-theme-black"></div>
+                    <div class="card-face card-face--back">
+                        <img class="cards" id="card2" 
+                            src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 ">
+                    </div>
+                </div>
+                <div class="col-2 card" id="third-card">
+                    <div class="card-face card-face--front card-theme-black"></div>
+                    <div class="card-face card-face--back">
+                        <img class="cards" id="card3" 
+                            src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 ">
+                    </div>
+                </div>
+                <div class="col-2 card" id="fourth-card">
+                    <div class="card-face card-face--front card-theme-black"></div>
+                    <div class="card-face card-face--back">
+                        <img class="cards" id="card4"
+                            src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 ">
+                    </div>
+                </div>
+                <div class="col-2 card" id="fifth-card">
+                    <div class="card-face card-face--front card-theme-black"></div>
+                    <div class="card-face card-face--back">
+                        <img class="cards" id="card5"
+                            src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 ">
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-2">
-            <div role="button" id="deal" class="play-buttons deal" type="button" onclick="drawCards(), flip()">DEAL</div>
+        <div class="col-12 container-fluid mt-2">
+            <div class="row hold-container">
+                <div role="button" class="col-1 p-0 hold">HOLD</div>
+                <div role="button" class="col-1 p-0 hold">HOLD</div>
+                <div role="button" class="col-1 p-0 hold">HOLD</div>
+                <div role="button" class="col-1 p-0 hold">HOLD</div>
+                <div role="button" class="col-1 p-0 hold">HOLD</div>
+            </div>
+        </div>
+        <div class="col-12 container-fluid mt-2 mb-2 text-center" style="height: 2.5vw">
+            <div class="row game-buttons">
+                <div class="col-2">
+                    <div role="button" class="play-buttons in-game-menu-button">MENU</div>
+                </div>
+                <div class="col-4">
+                    <div class="container-fluid">
+                        <div class="row m-0 justify-content-between">
+                            <div role="button" class="col-3 pl-0 pr-0 play-buttons" id="bet-down">DOWN</div>
+                            <div class="col-5 play-buttons" id="bet-counter">1000</div>
+                            <div role="button" class="col-3 pl-0 pr-0 play-buttons" id="bet-up">UP</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div role="button" class="play-buttons double">DOUBLE</div>
+                </div>
+                <div class="col-2">
+                    <div role="button" id="deal" class="play-buttons deal" type="button" onclick="drawCards(), flip()">DEAL</div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
