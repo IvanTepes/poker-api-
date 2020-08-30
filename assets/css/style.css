@@ -269,6 +269,22 @@
 }
 /* /game screen */
 
+.load-screen {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    font-weight: bold;
+    font-size: 1.5em;
+    line-height: 50vw;
+    vertical-align: middle;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+
 /* Information Container */
 .info-container {
     height: 14vw;
@@ -506,8 +522,8 @@
     color: yellow;
 }
 
-#bet-down,
-#bet-up {
+
+.bet-buttons {
     font-size: 1vw;
     padding-top: 0.8vw;
     color: black;
@@ -515,12 +531,26 @@
     box-shadow: 0px 0px 1vw 0.1vw #000000, inset 0px 0px 1vw 0.1vw #000000;
 }
 
+
 #bet-up:hover {
     background-color: green;
 }
 
 #bet-down:hover {
     background-color: red;
+}
+
+.button-bet-off {
+    font-size: 1vw;
+    padding-top: 0.8vw;
+    text-align: center;
+    vertical-align: middle;
+    box-shadow: 0px 0px 1vw 0.1vw #000000, inset 0px 0px 1vw 0.1vw #000000;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    text-shadow: rgb(0, 0, 0) 0px 0px 2px;
+    background: linear-gradient(rgb(221, 221, 221), rgb(170, 170, 170));
+    
 }
 
 /* Hold Card Button */

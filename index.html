@@ -26,7 +26,7 @@
     <div class="row mx-auto main-menu" id="main-menu">
         <div class="col container main-menu-items-container new-game">
             <div class="button-container">
-				<div role="button" id="new-game" class="col-8 mx-auto new-game-button">New Game</div>
+				<div role="button" id="new-game" class="col-8 mx-auto new-game-button" onclick="newGame()">New Game</div>
 			</div>
         </div>
         <div class="col main-menu-items-container records">
@@ -91,6 +91,8 @@
 
 <!-- Cards src note Src is set up like this to remove border when src is empty-->
 <!-- Game Screen -->
+<div class="container-fluid load-screen" id="divLoadScreen" style="display: none;
+">LOADING...</div>
 <div class="container-fluid theme-red" id="game">
     <div class="row game-screen">
         <div class="col-12 container-fluid pt-2">
@@ -101,7 +103,7 @@
                             <div class="col-4 credit-remaining-text">CREDIT:</div>
                             <div class="col-8 container-fluid credit-remaining-value text-center">
                                 <!-- try fix when score is too big -->
-                                <div class="container-fluid p-0">5,000,003</div>
+                                <div class="container-fluid p-0" id="credits"></div>
                             </div>
                         </div>
                     </div>
@@ -109,7 +111,7 @@
                         <div class="row">
                             <div class="col-4 wins-text">WIN:</div>
                             <div class="col-8 container-fluid wins-value text-center">
-                                <div class="container-fluid p-0">5,000,000</div>
+                                <div class="container-fluid p-0">0</div>
                             </div>
                         </div>
                     </div> 
@@ -216,9 +218,9 @@
                 <div class="col-4">
                     <div class="container-fluid">
                         <div class="row m-0 justify-content-between">
-                            <div role="button" class="col-3 pl-0 pr-0 play-buttons" id="bet-down">DOWN</div>
+                            <div role="button" class="col-3 pl-0 pr-0 play-buttons bet-buttons " id="bet-down" onclick=" bet('DOWN')">DOWN</div>
                             <div class="col-5 play-buttons" id="bet-counter">1000</div>
-                            <div role="button" class="col-3 pl-0 pr-0 play-buttons" id="bet-up">UP</div>
+                            <div role="button" class="col-3 pl-0 pr-0 play-buttons bet-buttons " id="bet-up" onclick=" bet('UP')">UP</div>
                         </div>
                     </div>
                 </div>
@@ -235,9 +237,10 @@
 <!-- /game screen -->
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+	<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
 		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-	</script>
+	</script> -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
 		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
 	</script>
@@ -246,6 +249,10 @@
 	</script>
     <!-- Poker Javascript-->
     <script type="text/javascript" src="assets/js/main.js"></script>
+    <!-- <script type="text/javascript" src="assets/js/testing.js"></script> -->
+    <!-- <script type="text/javascript" src="assets/js/new.js"></script> -->
+  <!--   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+
     <!-- /poker Javascript-->
 </body>
 
