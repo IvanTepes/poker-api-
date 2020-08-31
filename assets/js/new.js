@@ -120,3 +120,14 @@ function drawCards() {
 
 drawCards();
 
+document.getElementById("hold-button-0").classList.add('hold'),
+        document.getElementById("hold-button-1").classList.add('hold'),
+        document.getElementById("hold-button-2").classList.add('hold'),
+        document.getElementById("hold-button-3").classList.add('hold'),
+        document.getElementById("hold-button-4").classList.add('hold')
+
+        document.getElementById("hold-button-0").classList.add('hold-inactive'),
+        document.getElementById("hold-button-1").classList.add('hold-inactive'),
+        document.getElementById("hold-button-2").classList.add('hold-inactive'),
+        document.getElementById("hold-button-3").classList.add('hold-inactive'),
+        document.getElementById("hold-button-4").classList.add('hold-inactive')

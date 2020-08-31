@@ -29,9 +29,10 @@ let prizeWinThread; // Interval function handling combination on winning Hand
 
 function newGame() { // Start a new game
     credits = startCredits;
-    gameState = gameStates.gameOver;
+    gameState = gameStates.secondDeal;
     updateCreditsValue();
     updateBetValue();
+    updateHoldButtons();
 }
 
 function updateCreditsValue() { // Updating Credits
@@ -64,16 +65,36 @@ function bet(action) {
 
 // Betting active or inactive 
 function updateBetValue() {
-    if (gameState === gameStates.firstDeal || gameState === gameStates.handWon || gameState == gameStates.handLost || gameState == gameStates.save) // Betting buttons lit up and active
+    if (gameState === gameStates.firstDeal || gameState === gameStates.handWon || gameState == gameStates.handLost || gameState == gameStates.save || gameState === gameStates.double) // Betting buttons lit up and active
         document.getElementById("bet-down").classList.add = document.getElementById("bet-up").classList.add = "bet-buttons";
-    else if (gameState === gameStates.gecondDeal || gameState === gameStates.gameOver) // Betting buttons subdued and inactive
-    
-        document.getElementById("bet-down").classList.add = document.getElementById("bet-up").classList.add = "button-bet-off";
-
+    else if (gameState === gameStates.secondDeal || gameState === gameStates.gameOver) // Betting buttons subdued and inactive
+        document.getElementById("bet-down").classList.add('button-bet-off'),
+        document.getElementById("bet-up").classList.add('button-bet-off'),
+        document.getElementById("bet-down").classList.remove('bet-buttons'),
+        document.getElementById("bet-up").classList.remove('bet-buttons');
+        
     document.getElementById('bet-counter').innerHTML = currentBet;
 }
 
-
+// Hold buttons active or inactive
+function updateHoldButtons() {
+    // Hold Buttons active
+    if (gameState === gameStates.secondDeal) 
+        document.getElementById("hold-button-0").classList.add('hold'),
+        document.getElementById("hold-button-1").classList.add('hold'),
+        document.getElementById("hold-button-2").classList.add('hold'),
+        document.getElementById("hold-button-3").classList.add('hold'),
+        document.getElementById("hold-button-4").classList.add('hold')
+    // Hold Buttons inactive
+    else if (gameState === gameStates.firsDeal || gameState === gameStates.handWon || 
+        gameState === gameStates.handLost || gameState === gameStates.double || 
+        gameState === gameStates.save || gameState === gameStates.gameOver)
+        document.getElementById("hold-button-0").classList.add('hold-inactive'),
+        document.getElementById("hold-button-1").classList.add('hold-inactive'),
+        document.getElementById("hold-button-2").classList.add('hold-inactive'),
+        document.getElementById("hold-button-3").classList.add('hold-inactive'),
+        document.getElementById("hold-button-4").classList.add('hold-inactive')
+};
 
 /* Main Menu Options Buttons*/
  $('.hold').click(function() {
