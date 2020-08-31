@@ -33,15 +33,18 @@ function newGame() { // Start a new game
     updateCreditsValue();
     updateBetValue();
     updateHoldButtons();
-}
+    updateDoubleButton();
+};
 
-function updateCreditsValue() { // Updating Credits
+// Updating Credits
+function updateCreditsValue() { 
     document.getElementById('credits').innerHTML = credits;
 }
 
-
+// Bet action min-max bet
 function bet(action) {
-    if ( gameState !== gameStates.firstDeal &&
+    if ( gameState !== gameStates.uninitialized &&
+         gameState !== gameStates.firstDeal &&
          gameState !== gameStates.handWon &&
          gameState !== gameStates.handLost &&
          gameState !== gameStates.double)
@@ -62,20 +65,21 @@ function bet(action) {
     updateBetValue();
     updateCreditsValue();
 }
-
+// Find better way for classes clan
 // Betting active or inactive 
 function updateBetValue() {
-    if (gameState === gameStates.firstDeal || gameState === gameStates.handWon || gameState == gameStates.handLost || gameState == gameStates.save || gameState === gameStates.double) // Betting buttons lit up and active
+    if (gameState === gameStates.uninitialized || gameState === gameStates.firstDeal || gameState === gameStates.handWon || gameState == gameStates.handLost || gameState == gameStates.save || gameState === gameStates.double) // Betting buttons lit up and active
         document.getElementById("bet-down").classList.add = document.getElementById("bet-up").classList.add = "bet-buttons";
     else if (gameState === gameStates.secondDeal || gameState === gameStates.gameOver) // Betting buttons subdued and inactive
-        document.getElementById("bet-down").classList.add('button-bet-off'),
-        document.getElementById("bet-up").classList.add('button-bet-off'),
+        document.getElementById("bet-down").classList.add('bet-inactive'),
+        document.getElementById("bet-up").classList.add('bet-inactive'),
         document.getElementById("bet-down").classList.remove('bet-buttons'),
         document.getElementById("bet-up").classList.remove('bet-buttons');
         
     document.getElementById('bet-counter').innerHTML = currentBet;
 }
 
+// Try find better way for classes clean
 // Hold buttons active or inactive
 function updateHoldButtons() {
     // Hold Buttons active
@@ -86,7 +90,7 @@ function updateHoldButtons() {
         document.getElementById("hold-button-3").classList.add('hold'),
         document.getElementById("hold-button-4").classList.add('hold')
     // Hold Buttons inactive
-    else if (gameState === gameStates.firsDeal || gameState === gameStates.handWon || 
+    else if (gameState === gameStates.uninitialized || gameState === gameStates.firstDeal || gameState === gameStates.handWon || 
         gameState === gameStates.handLost || gameState === gameStates.double || 
         gameState === gameStates.save || gameState === gameStates.gameOver)
         document.getElementById("hold-button-0").classList.add('hold-inactive'),
@@ -94,6 +98,17 @@ function updateHoldButtons() {
         document.getElementById("hold-button-2").classList.add('hold-inactive'),
         document.getElementById("hold-button-3").classList.add('hold-inactive'),
         document.getElementById("hold-button-4").classList.add('hold-inactive')
+};
+
+// Double Button active or inactive
+function updateDoubleButton() {
+    // If hand is won button is active
+    if (gameState === gameStates.handWon) 
+        document.getElementById("double-button").classList.add('play-buttons');
+    // If not inactive
+    else if (gameState === gameStates.uninitialized || gameState === gameStates.firstDeal ||              gameState === gameStates.secondDeal || gameState === gameStates.handLost || 
+             gameState === gameStates.save || gameState === gameStates.gameOver)
+        document.getElementById("double-button").classList.add("double-inactive") 
 };
 
 /* Main Menu Options Buttons*/

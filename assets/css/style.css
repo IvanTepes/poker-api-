@@ -518,10 +518,10 @@
 
 }
 
+.save-button,
 .in-game-menu-button {
     color: yellow;
 }
-
 
 .bet-buttons {
     font-size: 1vw;
@@ -531,7 +531,6 @@
     box-shadow: 0px 0px 1vw 0.1vw #000000, inset 0px 0px 1vw 0.1vw #000000;
 }
 
-
 #bet-up:hover {
     background-color: green;
 }
@@ -540,7 +539,7 @@
     background-color: red;
 }
 
-.button-bet-off {
+.bet-inactive {
     font-size: 1vw;
     padding-top: 0.8vw;
     text-align: center;
@@ -551,8 +550,26 @@
     text-shadow: rgb(0, 0, 0) 0px 0px 2px;
     background: linear-gradient(rgb(221, 221, 221), rgb(170, 170, 170));
     pointer-events: none;
-    
-    
+}
+
+.double-inactive {
+    text-align: center;
+    vertical-align: middle;
+    color: rgb(78 78 78);
+    text-shadow: rgb(0, 0, 0) 0px 0px 2px;
+    background: linear-gradient(rgb(221, 221, 221), rgb(170, 170, 170));
+    pointer-events: none;
+    padding-top: 0.6vh;
+    font-size: 1.7vw;
+    background-color: black;
+    font-family: 'Goblin One', cursive;
+    border: 2px solid #bfbfbf;
+    box-shadow: 0px 0px 1vw 0.4vw black, inset 0px 0px 0.4vw 0.1vw #ffffff;
+}
+
+/* Disabling hover over bet counter */
+#bet-counter {
+    pointer-events: none;
 }
 
 /* Hold Card Button */
