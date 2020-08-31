@@ -131,3 +131,20 @@ document.getElementById("hold-button-0").classList.add('hold'),
         document.getElementById("hold-button-2").classList.add('hold-inactive'),
         document.getElementById("hold-button-3").classList.add('hold-inactive'),
         document.getElementById("hold-button-4").classList.add('hold-inactive')
+
+
+
+   .double-inactive {
+    text-align: center;
+    vertical-align: middle;
+    color: rgb(78 78 78);
+    text-shadow: rgb(0, 0, 0) 0px 0px 2px;
+    background: linear-gradient(rgb(221, 221, 221), rgb(170, 170, 170));
+    pointer-events: none;
+    padding-top: 0.6vh;
+    font-size: 1.7vw;
+    background-color: black;
+    font-family: 'Goblin One', cursive;
+    border: 2px solid #bfbfbf;
+    box-shadow: 0px 0px 1vw 0.4vw black, inset 0px 0px 0.4vw 0.1vw #ffffff;
+}

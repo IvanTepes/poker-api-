@@ -10,30 +10,31 @@ let data = $.ajax({ // Fetch api (deck) cards
 let deck = data.cards; // deck cards from api
 
 let gameStates = { // Game state 
-    uninitialized: 0, 
+    newGame: 0, 
     firstDeal: 1,
     secondDeal: 2,
     handLost: 3,
     handWon: 4,
-    gameOver: 5,
-    double: 6,
+    double: 5,
+    gameOver: 6,
     saveScore: 7
 }
 
-let gameState = gameStates.uninitialized; // Initial game state
-let startCredits = 10000; // Number of starting credits
+let gameState = gameStates.newGame; // Initial game state
+let startCredits = 9000; // Number of starting credits
 let credits = startCredits; // Number of current credits
 let currentBet = 100; // Amount of bet
 let winID = -1; // Winning ID of prize if Hand is winning
 let prizeWinThread; // Interval function handling combination on winning Hand
 
-function newGame() { // Start a new game
+function startGame() { // Start a new game
     credits = startCredits;
     gameState = gameStates.secondDeal;
     updateCreditsValue();
     updateBetValue();
     updateHoldButtons();
     updateDoubleButton();
+    updateSaveScoreButton();
 };
 
 // Updating Credits
@@ -43,7 +44,7 @@ function updateCreditsValue() {
 
 // Bet action min-max bet
 function bet(action) {
-    if ( gameState !== gameStates.uninitialized &&
+    if ( gameState !== gameStates.newGame &&
          gameState !== gameStates.firstDeal &&
          gameState !== gameStates.handWon &&
          gameState !== gameStates.handLost &&
@@ -68,7 +69,7 @@ function bet(action) {
 // Find better way for classes clan
 // Betting active or inactive 
 function updateBetValue() {
-    if (gameState === gameStates.uninitialized || gameState === gameStates.firstDeal || gameState === gameStates.handWon || gameState == gameStates.handLost || gameState == gameStates.save || gameState === gameStates.double) // Betting buttons lit up and active
+    if (gameState === gameStates.newGame || gameState === gameStates.firstDeal || gameState === gameStates.handWon || gameState == gameStates.handLost || gameState == gameStates.save || gameState === gameStates.double) // Betting buttons lit up and active
         document.getElementById("bet-down").classList.add = document.getElementById("bet-up").classList.add = "bet-buttons";
     else if (gameState === gameStates.secondDeal || gameState === gameStates.gameOver) // Betting buttons subdued and inactive
         document.getElementById("bet-down").classList.add('bet-inactive'),
@@ -90,7 +91,7 @@ function updateHoldButtons() {
         document.getElementById("hold-button-3").classList.add('hold'),
         document.getElementById("hold-button-4").classList.add('hold')
     // Hold Buttons inactive
-    else if (gameState === gameStates.uninitialized || gameState === gameStates.firstDeal || gameState === gameStates.handWon || 
+    else if (gameState === gameStates.newGame || gameState === gameStates.firstDeal || gameState === gameStates.handWon || 
         gameState === gameStates.handLost || gameState === gameStates.double || 
         gameState === gameStates.save || gameState === gameStates.gameOver)
         document.getElementById("hold-button-0").classList.add('hold-inactive'),
@@ -106,9 +107,22 @@ function updateDoubleButton() {
     if (gameState === gameStates.handWon) 
         document.getElementById("double-button").classList.add('play-buttons');
     // If not inactive
-    else if (gameState === gameStates.uninitialized || gameState === gameStates.firstDeal ||              gameState === gameStates.secondDeal || gameState === gameStates.handLost || 
+    else if (gameState === gameStates.newGame || gameState === gameStates.firstDeal ||              gameState === gameStates.secondDeal || gameState === gameStates.handLost || 
              gameState === gameStates.save || gameState === gameStates.gameOver)
         document.getElementById("double-button").classList.add("double-inactive") 
+};
+
+// Save Score Button active op inactive
+function updateSaveScoreButton() {
+    // if game state New Game and credit is more of 10000
+    if ( gameState === gameStates.newGame || credits > 10000 )
+        document.getElementById("save-score").classList.add('save-button')
+    // if not try harder
+    else if (gameState === gameStates.firstDeal || gameState === gameStates.secondDeal ||
+        gameState === gameStates.handLost || gameState === gameStates.handWon || 
+        gameState === gameStates.double || gameState === gameStates.gameOver || 
+        credits < 10000)
+        document.getElementById("save-score").classList.add('save-inactive')
 };
 
 /* Main Menu Options Buttons*/
