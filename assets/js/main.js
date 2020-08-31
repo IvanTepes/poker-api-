@@ -21,7 +21,7 @@ let gameStates = { // Game state
 }
 
 let gameState = gameStates.newGame; // Initial game state
-let startCredits = 9000; // Number of starting credits
+let startCredits = 11000; // Number of starting credits
 let credits = startCredits; // Number of current credits
 let currentBet = 100; // Amount of bet
 let winID = -1; // Winning ID of prize if Hand is winning
@@ -29,18 +29,20 @@ let prizeWinThread; // Interval function handling combination on winning Hand
 
 function startGame() { // Start a new game
     credits = startCredits;
-    gameState = gameStates.secondDeal;
+    gameState = gameStates.handWon;
     updateCreditsValue();
     updateBetValue();
     updateHoldButtons();
     updateDoubleButton();
     updateSaveScoreButton();
+    updateDealButton();
+    updateInGameMenuButton();
 };
 
 // Updating Credits
 function updateCreditsValue() { 
     document.getElementById('credits').innerHTML = credits;
-}
+};
 
 // Bet action min-max bet
 function bet(action) {
@@ -69,60 +71,83 @@ function bet(action) {
 // Find better way for classes clan
 // Betting active or inactive 
 function updateBetValue() {
-    if (gameState === gameStates.newGame || gameState === gameStates.firstDeal || gameState === gameStates.handWon || gameState == gameStates.handLost || gameState == gameStates.save || gameState === gameStates.double) // Betting buttons lit up and active
-        document.getElementById("bet-down").classList.add = document.getElementById("bet-up").classList.add = "bet-buttons";
-    else if (gameState === gameStates.secondDeal || gameState === gameStates.gameOver) // Betting buttons subdued and inactive
-        document.getElementById("bet-down").classList.add('bet-inactive'),
-        document.getElementById("bet-up").classList.add('bet-inactive'),
-        document.getElementById("bet-down").classList.remove('bet-buttons'),
-        document.getElementById("bet-up").classList.remove('bet-buttons');
+    if (gameState === gameStates.newGame || gameState === gameStates.firstDeal) // Betting buttons lit up and active
+            document.getElementById("bet-down").classList.add = document.getElementById("bet-up")   .classList.add = "bet-buttons";
+    else if (gameState === gameStates.firstDeal || gameState === gameStates.secondDeal ||                 gameState === gameStates.handLost || gameState === gameStates.handWon || 
+             gameState === gameStates.double || gameState === gameStates.gameOver)       
+                document.getElementById("bet-down").classList.add('bet-inactive'),
+                document.getElementById("bet-up").classList.add('bet-inactive'),
+                document.getElementById("bet-down").classList.remove('bet-buttons'),
+                document.getElementById("bet-up").classList.remove('bet-buttons');
         
     document.getElementById('bet-counter').innerHTML = currentBet;
-}
+};
 
 // Try find better way for classes clean
 // Hold buttons active or inactive
 function updateHoldButtons() {
     // Hold Buttons active
     if (gameState === gameStates.secondDeal) 
-        document.getElementById("hold-button-0").classList.add('hold'),
-        document.getElementById("hold-button-1").classList.add('hold'),
-        document.getElementById("hold-button-2").classList.add('hold'),
-        document.getElementById("hold-button-3").classList.add('hold'),
-        document.getElementById("hold-button-4").classList.add('hold')
+            document.getElementById("hold-button-0").classList.add('hold'),
+            document.getElementById("hold-button-1").classList.add('hold'),
+            document.getElementById("hold-button-2").classList.add('hold'),
+            document.getElementById("hold-button-3").classList.add('hold'),
+            document.getElementById("hold-button-4").classList.add('hold');
     // Hold Buttons inactive
-    else if (gameState === gameStates.newGame || gameState === gameStates.firstDeal || gameState === gameStates.handWon || 
-        gameState === gameStates.handLost || gameState === gameStates.double || 
-        gameState === gameStates.save || gameState === gameStates.gameOver)
-        document.getElementById("hold-button-0").classList.add('hold-inactive'),
-        document.getElementById("hold-button-1").classList.add('hold-inactive'),
-        document.getElementById("hold-button-2").classList.add('hold-inactive'),
-        document.getElementById("hold-button-3").classList.add('hold-inactive'),
-        document.getElementById("hold-button-4").classList.add('hold-inactive')
+    else if (gameState === gameStates.newGame || gameState === gameStates.firstDeal || 
+             gameState === gameStates.handWon || gameState === gameStates.handLost || 
+             gameState === gameStates.double || gameState === gameStates.gameOver)
+                document.getElementById("hold-button-0").classList.add('hold-inactive'),
+                document.getElementById("hold-button-1").classList.add('hold-inactive'),
+                document.getElementById("hold-button-2").classList.add('hold-inactive'),
+                document.getElementById("hold-button-3").classList.add('hold-inactive'),
+                document.getElementById("hold-button-4").classList.add('hold-inactive');
 };
 
 // Double Button active or inactive
+// When game is in phase where is win and "Double bonus mini game is offered"
 function updateDoubleButton() {
     // If hand is won button is active
-    if (gameState === gameStates.handWon) 
-        document.getElementById("double-button").classList.add('play-buttons');
-    // If not inactive
-    else if (gameState === gameStates.newGame || gameState === gameStates.firstDeal ||              gameState === gameStates.secondDeal || gameState === gameStates.handLost || 
-             gameState === gameStates.save || gameState === gameStates.gameOver)
-        document.getElementById("double-button").classList.add("double-inactive") 
+    if (gameState === gameStates.handWon || gameState === gameStates.double) 
+            document.getElementById("double-button").classList.add('double');
+    // If not win continue inactive
+    else if (gameState === gameStates.newGame || gameState === gameStates.firstDeal ||                    gameState === gameStates.secondDeal || gameState === gameStates.handLost || 
+             gameState === gameStates.gameOver)
+                document.getElementById("double-button").classList.add("double-inactive") 
 };
 
-// Save Score Button active op inactive
+// Save Score Button active or inactive
+// When player can save his high score
 function updateSaveScoreButton() {
-    // if game state New Game and credit is more of 10000
-    if ( gameState === gameStates.newGame || credits > 10000 )
-        document.getElementById("save-score").classList.add('save-button')
+    // if game state is New Game and Credit is more than 10000
+    if (gameState === gameStates.newGame && credits > 10000 )
+            document.getElementById("save-score").classList.add('save-button')
     // if not try harder
-    else if (gameState === gameStates.firstDeal || gameState === gameStates.secondDeal ||
-        gameState === gameStates.handLost || gameState === gameStates.handWon || 
-        gameState === gameStates.double || gameState === gameStates.gameOver || 
-        credits < 10000)
-        document.getElementById("save-score").classList.add('save-inactive')
+    else if (gameState === gameStates.newGame || gameState === gameStates.firstDeal || 
+             gameState === gameStates.secondDeal || gameState === gameStates.handLost || gameState === gameStates.handWon || gameState === gameStates.double || 
+             gameState === gameStates.gameOver && credits < 10000)
+                document.getElementById("save-score").classList.add('save-inactive')
+};
+
+// Update Deal Button 
+// When game is in phase 
+// where player have choice
+// try to double it or continue play
+// Deal Button change from "DEAL" to "NEW DEAL"
+function updateDealButton() {
+    if (gameState === gameStates.handWon || gameState === gameStates.double || gameState ===         gameStates.handLost)
+            document.getElementById("deal").innerHTML = 'NEW DEAL',
+            document.getElementById("deal").classList.add('new-deal')
+    else if (gameState === gameStates.newGame || gameState === gameStates.firstDeal || 
+             gameState === gameStates.secondDeal || gameState === gameStates.gameOver);
+};
+
+// In Game Menu Button
+// Player can't leave game in middle of hand
+// Only before cards are fliped
+function updateInGameMenuButton() {
+    if (gameState === gameStates.newGame || gameState === gameStates.firstDeal)
+            document.getElementById("game-menu").classList.remove('game-menu-inactive')
 };
 
 /* Main Menu Options Buttons*/
