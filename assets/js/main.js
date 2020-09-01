@@ -1,5 +1,5 @@
 
-let data = $.ajax({ // Fetch api (deck) cards
+const data = $.ajax({ // Fetch api (deck) cards
     async: false,
     url: 'https://deckofcardsapi.com/api/deck/new/draw/?count=52',
     type: 'get',
@@ -7,8 +7,49 @@ let data = $.ajax({ // Fetch api (deck) cards
     dataType: "JSON"
 }).responseJSON;
 
-let deck = data.cards; // deck cards from api
 
+
+
+let deck = { // Deck Object - A 52 card poker deck
+    cards: data.cards, // Array of Cards objects representing one deck
+    shuffled: null, // Array of Card objects representing a shuffled deck
+    Initialize: function () { // Fill Deck with cards
+        this.cards = this.cards; // Cards from api call
+        /* console.log(this.cards) */
+    },
+    Shuffle: function () { // Sets cards in random order
+        this.shuffled = new Array(); // Flush all Cards in Deck
+        let cardIDs = new Array(); // Put card indices in list
+        for (var i = 0; i < this.cards.length; i++)
+            cardIDs.push(i);
+        while (cardIDs.length != 0) { // Pull indices randomly until none remain
+            let randomIndex = Math.floor(Math.random() * cardIDs.length);
+            let cardID = cardIDs.splice(randomIndex, 1); // take a value randomly
+            let card = this.cards[cardID];
+            card.locked = false; // Clear any previous lock on Card
+            card.flipState = 0; // Cards dealt face down
+            this.shuffled.push(card);
+            
+        }
+    },
+    Deal: function (numCards) { // Draw cards from shuffled deck
+        var dealt = new Array(); // Array of draw Card objects
+        for (var i = 0; i < numCards; i++)
+            dealt.push(this.shuffled.pop());
+        return dealt;
+    }
+    
+}
+deck.Initialize();
+deck.Shuffle();
+deck.Deal(5)
+console.log(deck)
+console.log(deck.Deal(5)) 
+ 
+console.log(deck)
+deck.Initialize();
+console.log(deck)
+deck.Initialize();
 let gameStates = { // Game state 
     newGame: 0, 
     firstDeal: 1,
@@ -20,7 +61,7 @@ let gameStates = { // Game state
     saveScore: 7
 }
 
-let gameState = gameStates.newGame; // Initial game state
+let gameState = gameStates.seconDeal; // Initial game state
 let startCredits = 11000; // Number of starting credits
 let credits = startCredits; // Number of current credits
 let currentBet = 100; // Amount of bet
@@ -29,7 +70,7 @@ let prizeWinThread; // Interval function handling combination on winning Hand
 
 function startGame() { // Start a new game
     credits = startCredits;
-    gameState = gameStates.handWon;
+    gameState = gameStates.secondDeal;
     updateCreditsValue();
     updateBetValue();
     updateHoldButtons();
@@ -135,11 +176,10 @@ function updateSaveScoreButton() {
 // try to double it or continue play
 // Deal Button change from "DEAL" to "NEW DEAL"
 function updateDealButton() {
-    if (gameState === gameStates.handWon || gameState === gameStates.double || gameState ===         gameStates.handLost)
-            document.getElementById("deal").innerHTML = 'NEW DEAL',
+    if (gameState === gameStates.handWon || gameState === gameStates.double ||
+        gameState === gameStates.handLost)
+        document.getElementById("deal").innerHTML = 'NEW DEAL',
             document.getElementById("deal").classList.add('new-deal')
-    else if (gameState === gameStates.newGame || gameState === gameStates.firstDeal || 
-             gameState === gameStates.secondDeal || gameState === gameStates.gameOver);
 };
 
 // In Game Menu Button
@@ -149,6 +189,11 @@ function updateInGameMenuButton() {
     if (gameState === gameStates.newGame || gameState === gameStates.firstDeal)
             document.getElementById("game-menu").classList.remove('game-menu-inactive')
 };
+
+function flip() {
+    $('.card').toggleClass('is-flipped');
+};
+
 
 /* Main Menu Options Buttons*/
  $('.hold').click(function() {
