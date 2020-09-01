@@ -15,8 +15,7 @@ let deck = { // Deck Object - A 52 card poker deck
     shuffled: null, // Array of Card objects representing a shuffled deck
     Initialize: function () { // Fill Deck with cards
         this.cards = this.cards; // Cards from api call
-        /* console.log(this.cards) */
-    },
+    }, 
     Shuffle: function () { // Sets cards in random order
         this.shuffled = new Array(); // Flush all Cards in Deck
         let cardIDs = new Array(); // Put card indices in list
@@ -39,13 +38,23 @@ let deck = { // Deck Object - A 52 card poker deck
         return dealt;
     }
     
+};
+
+function card(id, suit, rank) { // Card object - Represents a standard playing card.
+    this.ID = id; // Card ID: 1-52
+    this.Suit = suit; // Card Suit: 1-4 {Club, Diamond, Heart, Spade}
+    this.Rank = rank; // Card Rank: 1-13 {Ace, Two, ..King}
+    this.Locked = false; // true if Card is Locked/Held
+    this.FlipState = 0; // The flip state of card: 0 or 1 (Back Showing or Face Showing)
 }
+
+
 deck.Initialize();
-deck.Shuffle();
+deck.Shuffle(); 
+/* console.log(card(id)) */
 deck.Deal(5)
-console.log(deck)
+console.log(deck.Initialize())
 console.log(deck.Deal(5)) 
- 
 console.log(deck)
 deck.Initialize();
 console.log(deck)
@@ -61,12 +70,14 @@ let gameStates = { // Game state
     saveScore: 7
 }
 
-let gameState = gameStates.seconDeal; // Initial game state
+let gameState = gameStates.newGame; // Initial game state
 let startCredits = 11000; // Number of starting credits
 let credits = startCredits; // Number of current credits
 let currentBet = 100; // Amount of bet
 let winID = -1; // Winning ID of prize if Hand is winning
 let prizeWinThread; // Interval function handling combination on winning Hand
+let blinkOn = false; // Whether or not the flashing effect from a win is currently 
+
 
 function startGame() { // Start a new game
     credits = startCredits;
@@ -78,6 +89,7 @@ function startGame() { // Start a new game
     updateSaveScoreButton();
     updateDealButton();
     updateInGameMenuButton();
+    prizeWinBlink()
 };
 
 // Updating Credits
@@ -190,6 +202,20 @@ function updateInGameMenuButton() {
             document.getElementById("game-menu").classList.remove('game-menu-inactive')
 };
 
+function prizeWinBlink() {// Prize win indicator
+    blinkOn =! blinkOn; // Toggle the effect
+        document.getElementById('win' + winID).classList.add('win'); // The winning prize  
+}
+
+function resetPrizeWin() {
+    if (prizeWinThread != null) // Stop blinking
+        clearInterval(prizeWinThread); // Terminate any running thread
+    if (winID !== -1) { // Party is over, back to normal row style
+        document.getElementById('win' + winID).classList.remove('win');
+        winID = -1; // Reset prize win
+    }
+}
+
 function flip() {
     $('.card').toggleClass('is-flipped');
 };
@@ -273,3 +299,4 @@ $('.settings-card-back-black').on('click',function() {
     } 
 });
 
+deck.Initialize(); // Initialize Deck object 
